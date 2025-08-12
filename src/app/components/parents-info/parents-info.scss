@@ -1,0 +1,18 @@
+:host {
+  margin: 0px 16px;
+}
+
+p {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #454340;
+}
+
+#text {
+
+  &__parents {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+  }
+}

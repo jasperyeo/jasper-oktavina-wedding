@@ -1,0 +1,24 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  margin: 0px 16px;
+}
+
+img {
+  margin: 0px auto;
+}
+
+#image {
+
+  &__arch {
+    max-width: 1000px;
+    width: 100%;
+    filter: drop-shadow(gray 16px 16px 10px);
+  }
+  
+  &__couple {
+    max-width: 1000px;
+    width: 100%;
+  }
+}

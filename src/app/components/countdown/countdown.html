@@ -1,0 +1,29 @@
+<p class="text-4xl">
+  <span>COUNTDOWN</span>
+</p>
+<p class="text-lg">
+  <span class="icon">📅</span><span>TANGGAL ACARA: 27 SEP 2025</span><br>
+</p>
+<div class="timer__container">
+  <div class="timer__number">
+    <p class="text-2xl">{{ days() }}</p>
+    <p class="text-xs">HARI</p>
+  </div>
+  <div class="timer__number">
+    <p class="text-2xl">{{ hours() }}</p>
+    <p class="text-xs">JAM</p>
+  </div>
+  <div class="timer__number">
+    <p class="text-2xl">{{ minutes() }}</p>
+    <p class="text-xs">MENIT</p>
+  </div>
+  <div class="timer__number">
+    <p class="text-2xl">{{ seconds() }}</p>
+    <p class="text-xs">DETIK</p>
+  </div>
+</div>
+<button pButton (click)="downloadCal()">
+  <span pButtonLabel>
+    <span class="icon">📅</span><span>Tambahkan ke kalender</span><br>
+  </span>
+</button>
