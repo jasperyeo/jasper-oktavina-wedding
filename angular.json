@@ -28,8 +28,7 @@
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "assets": [
-              "src/assets/images",
-              "src/assets/audio",
+              "src/assets",
               {
                 "glob": "**/*",
                 "input": "public"
