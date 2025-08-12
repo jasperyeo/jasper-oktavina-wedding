@@ -18,7 +18,7 @@
           "builder": "@angular/build:application",
           "options": {
             "outputPath": {
-              "base": "dist",
+              "base": "docs",
               "browser": ""
             },
             "browser": "src/main.ts",
