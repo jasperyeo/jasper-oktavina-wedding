@@ -17,6 +17,7 @@
         "build": {
           "builder": "@angular/build:application",
           "options": {
+            "baseHref": "/jasper-oktavina-wedding/",
             "outputPath": {
               "base": "docs",
               "browser": ""
