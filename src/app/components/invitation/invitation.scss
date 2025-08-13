@@ -30,8 +30,20 @@ img {
   &__container {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     gap: 32px;
     padding: 0px 16px;
+    max-width: 1000px;
+    margin: 0px auto;
+    height: 100%;
+    overflow: auto;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 32px;
     max-width: 1000px;
     margin: 0px auto;
   }
@@ -43,19 +55,12 @@ img {
     max-width: 800px;
     width: 100vw;
     mix-blend-mode: multiply;
-    position: fixed;
-    left: 50%;
-    transform: translateX(-50%);
   }
 
   &__footer {
     max-width: 800px;
     width: 100vw;
     mix-blend-mode: multiply;
-    position: fixed;
-    bottom: 0px;
-    left: 50%;
-    transform: translateX(-50%);
   }
   
   &__couple {
