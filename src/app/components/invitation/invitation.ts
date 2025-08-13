@@ -1,5 +1,6 @@
-import { Component, output, OutputEmitterRef } from '@angular/core';
+import { Component, computed, input, InputSignal, output, OutputEmitterRef } from '@angular/core';
 import { ButtonModule } from 'primeng/button';
+import { INVITATION_CONTENT } from './invitation.constants';
 
 @Component({
   standalone: true,
@@ -12,11 +13,13 @@ import { ButtonModule } from 'primeng/button';
 })
 export class Invitation {
 
+  public readonly ctry: InputSignal<string> = input<string>('id');
+  public readonly content = computed(() => INVITATION_CONTENT[this.ctry()]);
+  public onOpen: OutputEmitterRef<void> = output<void>();
+
   constructor() {
     document.body.style.overflow = 'hidden';
   }
-
-  public onOpen: OutputEmitterRef<void> = output<void>();
 
   public openInvitation(): void {
     document.body.style.overflow = 'unset';
