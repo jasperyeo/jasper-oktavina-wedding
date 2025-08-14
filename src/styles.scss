@@ -1,6 +1,10 @@
 @import "tailwindcss";
 @plugin "tailwindcss-primeui";
 
+html, body {
+  overscroll-behavior: none;
+}
+
 .heart {
   position: absolute;
   top: -50px;
