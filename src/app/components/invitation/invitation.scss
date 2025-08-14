@@ -6,8 +6,15 @@
   top: 0;
   left: 0;
   z-index: 1;
-  background: url('/assets/images/background-tile.jpg');
+  background: url('/jasper-oktavina-wedding/assets/images/background-tile.jpg');
   background-repeat: repeat;
+
+  &.opened {
+    transition: all 2s, opacity .5s;
+    height: 0px;
+    top: -100%;
+    opacity: .2;
+  }
 }
 
 p {
@@ -30,8 +37,20 @@ img {
   &__container {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     gap: 32px;
     padding: 0px 16px;
+    max-width: 1000px;
+    margin: 0px auto;
+    height: 100dvh;
+    overflow: hidden auto;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 32px;
     max-width: 1000px;
     margin: 0px auto;
   }
@@ -43,19 +62,12 @@ img {
     max-width: 800px;
     width: 100vw;
     mix-blend-mode: multiply;
-    position: fixed;
-    left: 50%;
-    transform: translateX(-50%);
   }
 
   &__footer {
     max-width: 800px;
     width: 100vw;
     mix-blend-mode: multiply;
-    position: fixed;
-    bottom: 0px;
-    left: 50%;
-    transform: translateX(-50%);
   }
   
   &__couple {

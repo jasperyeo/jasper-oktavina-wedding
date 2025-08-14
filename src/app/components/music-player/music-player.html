@@ -1,3 +1,14 @@
-<audio loop>
-  <source src="/assets/audio/bg-music-trimmed.mp3" type="audio/mp3">
+<audio loop id="music-player">
+  <source src="assets/audio/bg-music-trimmed.mp3" type="audio/mp3">
 </audio>
+
+<button pButton (click)="toggleMusic()" [raised]="true"
+  [class.pulse]="isPlaying()" severity="secondary">
+  <span pButtonLabel>
+    @if (isPlaying()) {
+      🔊
+    } @else {
+      🔇
+    }
+  </span>
+</button>

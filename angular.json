@@ -17,6 +17,7 @@
         "build": {
           "builder": "@angular/build:application",
           "options": {
+            "baseHref": "/jasper-oktavina-wedding/",
             "outputPath": {
               "base": "docs",
               "browser": ""
@@ -28,8 +29,7 @@
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "assets": [
-              "src/assets/images",
-              "src/assets/audio",
+              "src/assets",
               {
                 "glob": "**/*",
                 "input": "public"

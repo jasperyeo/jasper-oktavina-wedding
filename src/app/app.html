@@ -1,40 +1,11 @@
 <main>
-  @if (!opened()) {
-    <invitation (onOpen)="open()" />
-  }
+  <invitation [ctry]="ctry()" (onOpen)="open()" />
   <header>
-    <img id="image__header" src="/assets/images/header-flowers-full.png" />
+    <img id="image__header" src="assets/images/header-flowers-full.png" />
   </header>
-  <section>
-    <cultural-logo-intro pAnimateOnScroll
-      enterClass="animate-enter fade-in-10 zoom-in-50 animate-duration-1000"
-      leaveClass="animate-leave fade-out-0" />
-    <character-intro pAnimateOnScroll
-      enterClass="animate-enter fade-in-10 zoom-in-50 animate-duration-1000"
-      leaveClass="animate-leave fade-out-0" />
-    <parents-info pAnimateOnScroll
-      enterClass="animate-enter fade-in-10 zoom-in-50 animate-duration-1000"
-      leaveClass="animate-leave fade-out-0" />
-    <event-info pAnimateOnScroll
-      enterClass="animate-enter fade-in-10 zoom-in-50 animate-duration-1000"
-      leaveClass="animate-leave fade-out-0" />
-    <separator pAnimateOnScroll
-      enterClass="animate-enter fade-in-10 zoom-in-50 animate-duration-1000"
-      leaveClass="animate-leave fade-out-0" />
-    <location pAnimateOnScroll
-      enterClass="animate-enter fade-in-10 zoom-in-50 animate-duration-1000"
-      leaveClass="animate-leave fade-out-0" />
-    <separator pAnimateOnScroll
-      enterClass="animate-enter fade-in-10 zoom-in-50 animate-duration-1000"
-      leaveClass="animate-leave fade-out-0" />
-    <countdown pAnimateOnScroll
-      enterClass="animate-enter fade-in-10 zoom-in-50 animate-duration-1000"
-      leaveClass="animate-leave fade-out-0" />
-  </section>
-  <music-player />
+  <router-outlet />
   <footer>
-    <img id="image__footer" src="/assets/images/footer-flowers-full.png" />
+    <img id="image__footer" src="assets/images/footer-flowers-full.png" />
   </footer>
 </main>
-
-<router-outlet />
+<div id="rain-container"></div>

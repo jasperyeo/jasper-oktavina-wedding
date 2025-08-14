@@ -1,0 +1,19 @@
+section {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  margin: 16px auto;
+  margin-bottom: 32px;
+  max-width: 1000px;
+}
+
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.animate-on-scroll.inview {
+  opacity: 1;
+  transform: translateY(0);
+}
