@@ -1,4 +1,4 @@
-import { Component, computed, input, InputSignal, output, OutputEmitterRef } from '@angular/core';
+import { Component, computed, HostBinding, input, InputSignal, output, OutputEmitterRef } from '@angular/core';
 import { ButtonModule } from 'primeng/button';
 import { INVITATION_CONTENT } from './invitation.constants';
 
@@ -16,6 +16,7 @@ export class Invitation {
   public readonly ctry: InputSignal<string> = input<string>('id');
   public readonly content = computed(() => INVITATION_CONTENT[this.ctry()]);
   public onOpen: OutputEmitterRef<void> = output<void>();
+  @HostBinding('class.opened') public opened: boolean = false;
 
   constructor() {
     document.body.style.overflow = 'hidden';
@@ -24,6 +25,7 @@ export class Invitation {
   public openInvitation(): void {
     document.body.style.overflow = 'unset';
     this.onOpen.emit();
+    this.opened = true;
     const audio: HTMLAudioElement | null = document.querySelector("audio");
     if (audio) {
       audio.volume = 0.2;

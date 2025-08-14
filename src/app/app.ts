@@ -25,6 +25,8 @@ export class App implements OnInit {
   };
   public ctry: WritableSignal<string> = signal<string>('');
   public opened: WritableSignal<boolean> = signal<boolean>(false);
+  public readonly imageUrl: string = 'assets/images/mini-heart.gif';
+  public container: HTMLElement | null = document.getElementById('rain-container');
 
   public ngOnInit(): void {
     this._router.events.pipe(
@@ -38,6 +40,29 @@ export class App implements OnInit {
 
   public open(): void {
     this.opened.set(true);
+    this.container = document.getElementById('rain-container')!;
+    this.startRain();
     window.scrollTo(0, 0);
+  }
+
+  private _createHeart(): void {
+    const heart = document.createElement('img');
+    heart.src = this.imageUrl;
+    heart.classList.add('heart');
+    heart.style.left = `${Math.random() * 100}%`;
+    heart.style.opacity = `${Math.random() * 0.5}`;
+    heart.style.filter = `blur(${Math.random() * 4}px)`;
+    const duration = 5 + Math.random() * 5;
+    heart.style.animationDuration = `${duration}s`;
+    this.container!.appendChild(heart);
+    setTimeout(() => {
+      heart.remove();
+    }, duration * 1000);
+  }
+
+  public startRain(): void {
+    setInterval(() => {
+      this._createHeart();
+    }, 1000);
   }
 }

@@ -1,7 +1,5 @@
 <main>
-  @if (!opened()) {
-    <invitation [ctry]="ctry()" (onOpen)="open()" />
-  }
+  <invitation [ctry]="ctry()" (onOpen)="open()" />
   <header>
     <img id="image__header" src="assets/images/header-flowers-full.png" />
   </header>
@@ -10,3 +8,4 @@
     <img id="image__footer" src="assets/images/footer-flowers-full.png" />
   </footer>
 </main>
+<div id="rain-container"></div>
