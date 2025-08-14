@@ -35,8 +35,8 @@ img {
     padding: 0px 16px;
     max-width: 1000px;
     margin: 0px auto;
-    height: 100%;
-    overflow: auto;
+    height: 100dvh;
+    overflow: hidden auto;
   }
 
   &__content {

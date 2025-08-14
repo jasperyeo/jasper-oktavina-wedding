@@ -1,2 +1,25 @@
 @import "tailwindcss";
 @plugin "tailwindcss-primeui";
+
+.heart {
+  position: absolute;
+  top: -50px;
+  width: 16px;
+  height: 16px;
+  animation-name: fall;
+  animation-timing-function: linear;
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(0);
+    opacity: 0.8;
+  }
+  90% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(100vh);
+    opacity: 0;
+  }
+}
