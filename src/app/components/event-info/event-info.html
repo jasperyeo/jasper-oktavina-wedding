@@ -1,10 +1,8 @@
 <p class="text-lg">
-  <span class="icon">📅</span><span>TANGGAL ACARA: 27 SEP 2025</span><br>
-  <span class="icon">📍</span><span>TEMPAT ACARA: SAM ANNA</span><br>
-  <span class="icon">🕰️</span><span>WAKTU: 12 SIANG - 5 SORE</span>
+  <span class="icon pi pi-calendar"></span><span>{{ content()?.DATE }}</span><br>
+  <span class="icon pi pi-map-marker"></span><span>{{ content()?.VENUE }}</span><br>
+  <span class="icon pi pi-clock"></span><span>{{ content()?.TIME }}</span>
 </p>
  <p class="text-base">
-  Merupakan suatu kehormatan 
-  Bapak/Ibu/Saudara/i berkenan hadir untuk
-  memberikan do’a restu kepada mempelai
+  {{ content()?.WELCOME }}
 </p>

@@ -17,7 +17,11 @@ p {
 
 #image {
   
-  &__malay {
+  &__logo {
     width: 100px;
+
+    &.small {
+      width: 80px;
+    }
   }
 }

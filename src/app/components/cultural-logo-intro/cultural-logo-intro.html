@@ -1,6 +1,5 @@
-<img id="image__malay" src="assets/images/logo-malay.png" />
+<img id="image__logo" [src]="content()?.LOGO_IMAGE_PATH" [class.small]="appService.country() === 'sg'" />
 <p class="text-base">
-  BISMILLAHIRRAHMANIRRAHIM<br><br>
-  Dengan ini kami menggundang Bapak/Ibu/Saudara/I
-  untuk hadir pada pernikahan dan resepsi:
+  {{ content()?.INTRO_TEXT_1 }}<br><br>
+  {{ content()?.INTRO_TEXT_2 }}
 </p>

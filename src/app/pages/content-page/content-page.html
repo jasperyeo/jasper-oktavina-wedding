@@ -1,16 +1,23 @@
 <section>
-  <cultural-logo-intro pAnimateOnScroll
+  <cultural-logo-intro
     enterClass="animate-enter fade-in-10 zoom-in-50 animate-duration-1000"
     leaveClass="animate-leave fade-out-0" />
   <character-intro pAnimateOnScroll
     enterClass="animate-enter fade-in-10 zoom-in-50 animate-duration-1000"
     leaveClass="animate-leave fade-out-0" />
-  <parents-info pAnimateOnScroll
-    enterClass="animate-enter fade-in-10 zoom-in-50 animate-duration-1000"
-    leaveClass="animate-leave fade-out-0" />
+  @if (appService.country() === 'id') {
+    <parents-info pAnimateOnScroll
+      enterClass="animate-enter fade-in-10 zoom-in-50 animate-duration-1000"
+      leaveClass="animate-leave fade-out-0" />
+  }
   <event-info pAnimateOnScroll
     enterClass="animate-enter fade-in-10 zoom-in-50 animate-duration-1000"
     leaveClass="animate-leave fade-out-0" />
+  @if (appService.country() === 'sg') {
+    <rsvp-form pAnimateOnScroll
+      enterClass="animate-enter fade-in-10 zoom-in-50 animate-duration-1000"
+      leaveClass="animate-leave fade-out-0" />
+  }
   <separator pAnimateOnScroll
     enterClass="animate-enter fade-in-10 zoom-in-50 animate-duration-1000"
     leaveClass="animate-leave fade-out-0" />

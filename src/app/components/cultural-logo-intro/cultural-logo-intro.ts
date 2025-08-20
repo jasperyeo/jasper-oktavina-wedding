@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, computed, inject } from '@angular/core';
+import { LOGO_INTRO_CONTENT } from './cultural-logo-intro.constants';
+import { AppService } from '../../app.service';
 
 @Component({
   standalone: true,
@@ -9,4 +11,6 @@ import { Component } from '@angular/core';
 })
 export class CulturalLogoIntro {
 
+  public readonly appService = inject(AppService);
+  public readonly content = computed(() => LOGO_INTRO_CONTENT[this.appService.country()]);
 }

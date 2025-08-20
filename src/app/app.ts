@@ -4,6 +4,7 @@ import { NavigationEnd, Router, RouterOutlet } from '@angular/router';
 import { filter } from 'rxjs';
 import { ButtonModule } from 'primeng/button';
 import { Invitation } from './components/invitation/invitation';
+import { AppService } from './app.service';
 
 @Component({
   selector: 'app-root',
@@ -19,11 +20,12 @@ export class App implements OnInit {
 
   private readonly _document: Document = inject(DOCUMENT);
   private readonly _router: Router = inject(Router);
+  private readonly _appService: AppService = inject(AppService);
   private readonly _langMap: any = {
     id: 'id-ID',
     sg: 'en-SG'
   };
-  public ctry: WritableSignal<string> = signal<string>('');
+  public country: WritableSignal<string> = signal<string>('');
   public opened: WritableSignal<boolean> = signal<boolean>(false);
   public readonly imageUrl: string = 'assets/images/mini-heart.gif';
   public container: HTMLElement | null = document.getElementById('rain-container');
@@ -32,9 +34,10 @@ export class App implements OnInit {
     this._router.events.pipe(
       filter(event => event instanceof NavigationEnd)
     ).subscribe((event: NavigationEnd) => {
-      const ctry: string = event.urlAfterRedirects.substring(1);
-      this.ctry.set(!this._langMap[ctry] ? 'id' : ctry);
-      this._document.documentElement.lang = this._langMap[this.ctry()];
+      const country: string = event.urlAfterRedirects.substring(1);
+      this.country.set(!this._langMap[country] ? 'id' : country);
+      this._appService.country.set(this.country());
+      this._document.documentElement.lang = this._langMap[this.country()];
     });
   }
 

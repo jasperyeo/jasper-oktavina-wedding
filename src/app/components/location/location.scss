@@ -9,6 +9,11 @@ p {
   text-align: center;
   font-family: Arial, Helvetica, sans-serif;
   color: #454340;
+
+  &.title {
+    font-family: 'josephsophia', 'Arial', 'Helvetica', sans-serif;
+    color: #ac8c7b;
+  }
 }
 
 .icon {
