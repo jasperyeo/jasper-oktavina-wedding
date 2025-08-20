@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, computed, inject } from '@angular/core';
+import { AppService } from '../../app.service';
+import { CHARACTER_INTRO_CONTENT } from './character-intro-constants';
 
 @Component({
   standalone: true,
@@ -9,4 +11,6 @@ import { Component } from '@angular/core';
 })
 export class CharacterIntro {
 
+  public readonly appService = inject(AppService);
+  public readonly content = computed(() => CHARACTER_INTRO_CONTENT[this.appService.country()]);
 }

@@ -13,8 +13,8 @@ import { INVITATION_CONTENT } from './invitation.constants';
 })
 export class Invitation {
 
-  public readonly ctry: InputSignal<string> = input<string>('id');
-  public readonly content = computed(() => INVITATION_CONTENT[this.ctry()]);
+  public readonly country: InputSignal<string> = input<string>('id');
+  public readonly content = computed(() => INVITATION_CONTENT[this.country()]);
   public onOpen: OutputEmitterRef<void> = output<void>();
   @HostBinding('class.opened') public opened: boolean = false;
 

@@ -1,5 +1,7 @@
-import { Component, signal, WritableSignal } from '@angular/core';
+import { Component, computed, inject, signal, WritableSignal } from '@angular/core';
 import { ButtonModule } from 'primeng/button';
+import { AppService } from '../../app.service';
+import { MUSIC_PLAYER_CONTENT } from './music-player.constants';
 
 @Component({
   standalone: true,
@@ -12,6 +14,8 @@ import { ButtonModule } from 'primeng/button';
 })
 export class MusicPlayer {
 
+  public readonly appService = inject(AppService);
+  public readonly content = computed(() => MUSIC_PLAYER_CONTENT[this.appService.country()]);
   public isPlaying: WritableSignal<boolean> = signal<boolean>(true);
 
   public toggleMusic(): void {

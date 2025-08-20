@@ -9,6 +9,11 @@ p {
   text-align: center;
   font-family: Arial, Helvetica, sans-serif;
   color: #454340;
+
+  &.title {
+    font-family: 'josephsophia', 'Arial', 'Helvetica', sans-serif;
+    color: #ac8c7b;
+  }
 }
 
 .icon {
@@ -29,7 +34,6 @@ p {
     border-radius: 8px;
     border: 1px solid #ac8c7b;
     line-height: 4.8;
-    filter: drop-shadow(gray 16px 16px 10px);
 
     p {
       margin-top: 24px;

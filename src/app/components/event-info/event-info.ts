@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, computed, inject } from '@angular/core';
+import { AppService } from '../../app.service';
+import { EVENT_INFO_CONTENT } from './event-info.constants';
 
 @Component({
   standalone: true,
@@ -9,4 +11,6 @@ import { Component } from '@angular/core';
 })
 export class EventInfo {
 
+  public readonly appService = inject(AppService);
+  public readonly content = computed(() => EVENT_INFO_CONTENT[this.appService.country()]);
 }

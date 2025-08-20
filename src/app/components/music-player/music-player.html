@@ -1,5 +1,5 @@
 <audio loop id="music-player">
-  <source src="assets/audio/bg-music-trimmed.mp3" type="audio/mp3">
+  <source [src]="content()?.BG_MUSIC_PATH" type="audio/mp3">
 </audio>
 
 <button pButton (click)="toggleMusic()" [raised]="true"

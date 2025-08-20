@@ -1,5 +1,11 @@
 @import "tailwindcss";
+@import "primeicons/primeicons.css";
 @plugin "tailwindcss-primeui";
+
+@font-face {
+  font-family: josephsophia;
+  src: url(assets/fonts/josephsophia.otf) format("opentype"), url(assets/fonts/josephsophia.ttf) format("truetype");
+}
 
 html, body {
   overscroll-behavior: none;
