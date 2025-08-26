@@ -11,6 +11,6 @@ import { CHARACTER_INTRO_CONTENT } from './character-intro-constants';
 })
 export class CharacterIntro {
 
-  public readonly appService = inject(AppService);
+  public readonly appService: AppService = inject(AppService);
   public readonly content = computed(() => CHARACTER_INTRO_CONTENT[this.appService.country()]);
 }

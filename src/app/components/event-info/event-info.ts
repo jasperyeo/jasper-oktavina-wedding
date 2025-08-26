@@ -11,6 +11,6 @@ import { EVENT_INFO_CONTENT } from './event-info.constants';
 })
 export class EventInfo {
 
-  public readonly appService = inject(AppService);
+  public readonly appService: AppService = inject(AppService);
   public readonly content = computed(() => EVENT_INFO_CONTENT[this.appService.country()]);
 }
