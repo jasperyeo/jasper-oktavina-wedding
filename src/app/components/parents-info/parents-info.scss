@@ -1,4 +1,7 @@
 :host {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
   margin: 0px 16px;
 }
 
@@ -14,5 +17,6 @@ p {
     display: flex;
     justify-content: space-around;
     width: 100%;
+    gap: 16px;
   }
 }

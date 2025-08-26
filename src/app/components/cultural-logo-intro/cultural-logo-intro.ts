@@ -11,6 +11,6 @@ import { AppService } from '../../app.service';
 })
 export class CulturalLogoIntro {
 
-  public readonly appService = inject(AppService);
+  public readonly appService: AppService = inject(AppService);
   public readonly content = computed(() => LOGO_INTRO_CONTENT[this.appService.country()]);
 }

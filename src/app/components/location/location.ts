@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, computed, inject } from '@angular/core';
+import { AppService } from '../../app.service';
+import { LOCATION_CONTENT } from './location.constants';
 
 @Component({
   standalone: true,
@@ -9,4 +11,6 @@ import { Component } from '@angular/core';
 })
 export class Location {
 
+  public readonly appService: AppService = inject(AppService);
+  public readonly content = computed(() => LOCATION_CONTENT[this.appService.country()]);
 }
