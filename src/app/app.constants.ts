@@ -50,3 +50,18 @@ export const HEART_RAIN_ATTRIBUTES: any = {
   IMAGE_URL: 'assets/images/mini-heart.gif',
   CONTAINER_CLASS: 'rain-container'
 };
+
+export const HEADER_AND_FOOTER: any = {
+  HEADER: {
+    ID: 'image__header',
+    ALT: 'Header',
+    TITLE: 'Header',
+    PATH: 'assets/images/header-flowers-full.png'
+  },
+  FOOTER: {
+    ID: 'image__footer',
+    ALT: 'Footer',
+    TITLE: 'Footer',
+    PATH: 'assets/images/footer-flowers-full.png'
+  }
+}

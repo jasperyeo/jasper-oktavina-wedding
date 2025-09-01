@@ -1,4 +1,6 @@
-<img id="image__logo" [src]="content()?.LOGO_IMAGE_PATH" [class.small]="appService.country() === 'sg'" />
+<img [id]="content()?.LOGO_IMAGE_ID" [alt]="content()?.LOGO_IMAGE_ALT"
+  [title]="content()?.LOGO_IMAGE_TITLE" [src]="content()?.LOGO_IMAGE_PATH"
+  [class.small]="appService.country() === 'sg'" />
 <p class="text-base">
   {{ content()?.INTRO_TEXT_1 }}<br><br>
   {{ content()?.INTRO_TEXT_2 }}

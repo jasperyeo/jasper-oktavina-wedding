@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, computed, inject } from '@angular/core';
+import { SEPARATOR_CONTENT } from './separator.constants';
+import { AppService } from '../../app.service';
 
 @Component({
   standalone: true,
@@ -9,4 +11,6 @@ import { Component } from '@angular/core';
 })
 export class Separator {
 
+  public readonly appService: AppService = inject(AppService);
+  public readonly content = computed(() => SEPARATOR_CONTENT);
 }
