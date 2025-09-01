@@ -1,2 +1,5 @@
-<img [id]="content()?.SEPARATOR_ID" [alt]="content()?.SEPARATOR_ALT"
-  [title]="content()?.SEPARATOR_TITLE" [src]="content()?.SEPARATOR_PATH" />
+<picture>
+  <source type="image/webp" [srcset]="content()?.SEPARATOR_WEBP">
+  <img [id]="content()?.SEPARATOR_ID" [alt]="content()?.SEPARATOR_ALT"
+    [title]="content()?.SEPARATOR_TITLE" [src]="content()?.SEPARATOR_PATH" />
+</picture>

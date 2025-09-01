@@ -1,12 +1,18 @@
 <div id="invitation__container">
-  <img [id]="content()?.HEADER?.ID" [alt]="content()?.HEADER?.ALT"
-    [title]="content()?.HEADER?.TITLE" [src]="content()?.HEADER?.PATH" />
+  <picture>
+    <source type="image/webp" [srcset]="content()?.HEADER?.WEBP">
+    <img [id]="content()?.HEADER?.ID" [alt]="content()?.HEADER?.ALT"
+      [title]="content()?.HEADER?.TITLE" [src]="content()?.HEADER?.PATH" />
+  </picture>
   <div id="invitation__content">
     <p class="text-lg">
       {{ content()?.PRE_NAME }}
     </p>
-    <img [id]="content()?.COUPLE_NAME_ID" [alt]="content()?.COUPLE_NAME_ALT"
-      [title]="content()?.COUPLE_NAME_TITLE" [src]="content()?.COUPLE_NAME_PATH" />
+    <picture>
+      <source type="image/webp" [srcset]="content()?.COUPLE_NAME_WEBP">
+      <img [id]="content()?.COUPLE_NAME_ID" [alt]="content()?.COUPLE_NAME_ALT"
+        [title]="content()?.COUPLE_NAME_TITLE" [src]="content()?.COUPLE_NAME_PATH" />
+    </picture>
     <p class="text-base">
       {{ content()?.POST_NAME_1 }}
     </p>
@@ -24,6 +30,9 @@
       </span>
     </button>
   </div>
-  <img [id]="content()?.FOOTER?.ID" [alt]="content()?.FOOTER?.ALT"
-    [title]="content()?.FOOTER?.TITLE" [src]="content()?.FOOTER?.PATH" />
+  <picture>
+    <source type="image/webp" [srcset]="content()?.FOOTER?.WEBP">
+    <img [id]="content()?.FOOTER?.ID" [alt]="content()?.FOOTER?.ALT"
+      [title]="content()?.FOOTER?.TITLE" [src]="content()?.FOOTER?.PATH" />
+  </picture>
 </div>

@@ -56,12 +56,14 @@ export const HEADER_AND_FOOTER: any = {
     ID: 'image__header',
     ALT: 'Header',
     TITLE: 'Header',
-    PATH: 'assets/images/header-flowers-full.png'
+    PATH: 'assets/images/header-flowers-full.png',
+    WEBP: 'assets/images/header-flowers-full.webp'
   },
   FOOTER: {
     ID: 'image__footer',
     ALT: 'Footer',
     TITLE: 'Footer',
-    PATH: 'assets/images/footer-flowers-full.png'
+    PATH: 'assets/images/footer-flowers-full.png',
+    WEBP: 'assets/images/footer-flowers-full.webp'
   }
 }

@@ -1,6 +1,10 @@
-<img [id]="content()?.LOGO_IMAGE_ID" [alt]="content()?.LOGO_IMAGE_ALT"
-  [title]="content()?.LOGO_IMAGE_TITLE" [src]="content()?.LOGO_IMAGE_PATH"
-  [class.small]="appService.country() === 'sg'" />
+<picture>
+  <source type="image/webp" [srcset]="content()?.LOGO_IMAGE_WEBP">
+  <img [id]="content()?.LOGO_IMAGE_ID" [alt]="content()?.LOGO_IMAGE_ALT"
+    [title]="content()?.LOGO_IMAGE_TITLE" [src]="content()?.LOGO_IMAGE_PATH"
+    [width]="content()?.LOGO_IMAGE_WIDTH" [height]="content()?.LOGO_IMAGE_HEIGHT"
+    [class.small]="appService.country() === 'sg'" />
+</picture>
 <p class="text-base">
   {{ content()?.INTRO_TEXT_1 }}<br><br>
   {{ content()?.INTRO_TEXT_2 }}

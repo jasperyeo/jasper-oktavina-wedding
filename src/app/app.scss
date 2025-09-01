@@ -1,5 +1,8 @@
 main {
-  background: url('/jasper-oktavina-wedding/assets/images/background-tile.jpg');
+  background-image: image-set(
+    url('/jasper-oktavina-wedding/assets/images/background-tile.webp') type('image/webp'),
+    url('/jasper-oktavina-wedding/assets/images/background-tile.jpg') type('image/jpeg')
+  );
   background-repeat: repeat;
 }
 

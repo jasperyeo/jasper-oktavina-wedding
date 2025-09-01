@@ -24,8 +24,8 @@ import { AppService } from '../../app.service';
     RsvpForm,
     Location,
     Countdown,
-  MusicPlayer
-],
+    MusicPlayer
+  ],
   templateUrl: './content-page.html',
   styleUrl: './content-page.scss'
 })
