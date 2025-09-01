@@ -1,6 +1,8 @@
 import { Component, computed, HostBinding, input, InputSignal, output, OutputEmitterRef } from '@angular/core';
 import { ButtonModule } from 'primeng/button';
 import { INVITATION_CONTENT } from './invitation.constants';
+import { CHARACTER_INTRO_CONTENT } from '../character-intro/character-intro.constants';
+import { HEADER_AND_FOOTER } from '../../app.constants';
 
 @Component({
   standalone: true,
@@ -14,7 +16,13 @@ import { INVITATION_CONTENT } from './invitation.constants';
 export class Invitation {
 
   public readonly country: InputSignal<string> = input<string>('id');
-  public readonly content = computed(() => INVITATION_CONTENT[this.country()]);
+  public readonly content = computed(() => {
+    return {
+      ...INVITATION_CONTENT[this.country()],
+      ...CHARACTER_INTRO_CONTENT[this.country()],
+      ...HEADER_AND_FOOTER
+    }
+  });
   public onOpen: OutputEmitterRef<void> = output<void>();
   @HostBinding('class.opened') public opened: boolean = false;
 

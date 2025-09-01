@@ -6,7 +6,10 @@
   top: 0;
   left: 0;
   z-index: 2;
-  background: url('/jasper-oktavina-wedding/assets/images/background-tile.jpg');
+  background-image: image-set(
+    url('/jasper-oktavina-wedding/assets/images/background-tile.webp') type('image/webp'),
+    url('/jasper-oktavina-wedding/assets/images/background-tile.jpg') type('image/jpeg')
+  );
   background-repeat: repeat;
 
   &.opened {
@@ -64,6 +67,7 @@ img {
 
   &__header {
     max-width: 90vw;
+    aspect-ratio: auto 800 / 311;
 
     @media (min-width: 769px) {
       max-width: 800px;
@@ -72,6 +76,7 @@ img {
 
   &__footer {
     max-width: 90vw;
+    aspect-ratio: auto 800 / 158;
 
     @media (min-width: 769px) {
       max-width: 800px;
@@ -81,5 +86,6 @@ img {
   &__couple {
     max-width: 1000px;
     width: 100%;
+    aspect-ratio: auto 968 / 139;
   }
 }

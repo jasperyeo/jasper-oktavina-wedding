@@ -1,6 +1,8 @@
-import { Component, signal, WritableSignal } from '@angular/core';
+import { Component, computed, inject, signal, WritableSignal } from '@angular/core';
 import { ButtonModule } from 'primeng/button';
 import { createEvent } from 'ics';
+import { AppService } from '../../app.service';
+import { COUNTDOWN_CONTENT } from './countdown.constants';
 
 @Component({
   standalone: true,
@@ -13,6 +15,8 @@ import { createEvent } from 'ics';
 })
 export class Countdown {
 
+  public readonly appService: AppService = inject(AppService);
+  public readonly content = computed(() => COUNTDOWN_CONTENT[this.appService.country()]);
   public readonly year: WritableSignal<number> = signal<number>(new Date().getFullYear()) ;
   public readonly weddingDate: WritableSignal<Date> = signal<Date>(new Date('Sep 27, 2025 12:00:00'));
   public readonly weddingDatetime: WritableSignal<number> = signal<number>(this.weddingDate().getTime());

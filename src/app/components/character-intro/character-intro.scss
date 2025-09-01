@@ -15,10 +15,12 @@ img {
     max-width: 1000px;
     width: 100%;
     filter: drop-shadow(gray 16px 16px 10px);
+    aspect-ratio: auto 968 / 1151;
   }
   
   &__couple {
     max-width: 1000px;
     width: 100%;
+    aspect-ratio: auto 968 / 139;
   }
 }

@@ -1,11 +1,19 @@
 <main>
   <invitation [country]="country()" (onOpen)="open()" />
   <header>
-    <img id="image__header" src="assets/images/header-flowers-full.png" />
+      <picture>
+        <source type="image/webp" [srcset]="content()?.HEADER?.WEBP">
+        <img [id]="content()?.HEADER?.ID" [alt]="content()?.HEADER?.ALT"
+          [title]="content()?.HEADER?.TITLE" [src]="content()?.HEADER?.PATH" />
+      </picture>
   </header>
   <router-outlet />
   <footer>
-    <img id="image__footer" src="assets/images/footer-flowers-full.png" />
+    <picture>
+      <source type="image/webp" [srcset]="content()?.FOOTER?.WEBP">
+      <img [id]="content()?.FOOTER?.ID" [alt]="content()?.FOOTER?.ALT"
+        [title]="content()?.FOOTER?.TITLE" [src]="content()?.FOOTER?.PATH" />
+    </picture>
   </footer>
 </main>
-<div id="rain-container"></div>
+<div [id]="content()?.CONTAINER_CLASS"></div>

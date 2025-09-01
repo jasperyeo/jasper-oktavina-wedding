@@ -1,2 +1,10 @@
-<img id="image__arch" [src]="content()?.COUPLE_IMAGE_PATH" />
-<img id="image__couple" src="assets/images/couple-name.png" />
+<picture>
+  <source type="image/webp" [srcset]="content()?.COUPLE_IMAGE_WEBP">
+  <img [id]="content()?.COUPLE_IMAGE_ID" [alt]="content()?.COUPLE_IMAGE_ALT"
+    [title]="content()?.COUPLE_IMAGE_TITLE" [src]="content()?.COUPLE_IMAGE_PATH" />
+</picture>
+<picture>
+  <source type="image/webp" [srcset]="content()?.COUPLE_NAME_WEBP">
+  <img [id]="content()?.COUPLE_NAME_ID" [alt]="content()?.COUPLE_NAME_ALT"
+    [title]="content()?.COUPLE_NAME_TITLE" [src]="content()?.COUPLE_NAME_PATH" />
+</picture>

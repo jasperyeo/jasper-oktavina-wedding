@@ -1,10 +1,11 @@
-import { Component, inject, OnInit, signal, WritableSignal } from '@angular/core';
+import { Component, computed, inject, OnInit, signal, WritableSignal } from '@angular/core';
 import { DOCUMENT } from '@angular/common';
 import { NavigationEnd, Router, RouterOutlet } from '@angular/router';
 import { filter } from 'rxjs';
 import { ButtonModule } from 'primeng/button';
 import { Invitation } from './components/invitation/invitation';
 import { AppService } from './app.service';
+import { HEART_RAIN_ATTRIBUTES, HEADER_AND_FOOTER } from './app.constants';
 
 @Component({
   selector: 'app-root',
@@ -21,14 +22,20 @@ export class App implements OnInit {
   private readonly _document: Document = inject(DOCUMENT);
   private readonly _router: Router = inject(Router);
   private readonly _appService: AppService = inject(AppService);
+  public readonly content = computed(() => {
+    return {
+      ...HEADER_AND_FOOTER,
+      ...HEART_RAIN_ATTRIBUTES
+    };
+  });
   private readonly _langMap: any = {
     id: 'id-ID',
     sg: 'en-SG'
   };
   public country: WritableSignal<string> = signal<string>('');
   public opened: WritableSignal<boolean> = signal<boolean>(false);
-  public readonly imageUrl: string = 'assets/images/mini-heart.gif';
-  public container: HTMLElement | null = document.getElementById('rain-container');
+  public readonly imageUrl: string = HEART_RAIN_ATTRIBUTES.IMAGE_URL;
+  public container: HTMLElement | null = document.getElementById(HEART_RAIN_ATTRIBUTES.CONTAINER_CLASS);
 
   public ngOnInit(): void {
     this._router.events.pipe(
@@ -43,7 +50,7 @@ export class App implements OnInit {
 
   public open(): void {
     this.opened.set(true);
-    this.container = document.getElementById('rain-container')!;
+    this.container = document.getElementById(HEART_RAIN_ATTRIBUTES.CONTAINER_CLASS)!;
     this.startRain();
     window.scrollTo(0, 0);
   }
