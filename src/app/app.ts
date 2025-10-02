@@ -46,12 +46,14 @@ export class App implements OnInit {
       this._appService.country.set(this.country());
       this._document.documentElement.lang = this._langMap[this.country()];
     });
+    this._document.documentElement.style.overflow = 'hidden';
   }
 
   public open(): void {
     this.opened.set(true);
     this.container = document.getElementById(HEART_RAIN_ATTRIBUTES.CONTAINER_CLASS)!;
     this.startRain();
+    this._document.documentElement.style.overflow = 'auto';
     window.scrollTo(0, 0);
   }
 
