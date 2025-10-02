@@ -9,6 +9,7 @@ import { RsvpForm } from "../../components/rsvp-form/rsvp-form";
 import { Location } from '../../components/location/location';
 import { Countdown } from '../../components/countdown/countdown';
 import { MusicPlayer } from '../../components/music-player/music-player';
+import { GettingHere } from '../../components/getting-here/getting-here';
 import { AppService } from '../../app.service';
 
 @Component({
@@ -24,7 +25,8 @@ import { AppService } from '../../app.service';
     RsvpForm,
     Location,
     Countdown,
-    MusicPlayer
+    MusicPlayer,
+    GettingHere
   ],
   templateUrl: './content-page.html',
   styleUrl: './content-page.scss'

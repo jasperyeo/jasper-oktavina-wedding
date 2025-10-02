@@ -9,7 +9,7 @@ export const LOCATION_CONTENT: any = {
   },
   sg: {
     TITLE: 'location',
-    NAME: 'MANDARIN ORIENTAL - ATRIUM BALLROOM',
+    NAME: 'Mandarin Oriental Singapore - Atrium Ballroom',
     GMAP_URL: 'https://maps.app.goo.gl/TfiUiXn4S2CHjD4a9',
     GMAP_TITLE: 'Location',
     GMAP_ADDRESS: 'Mandarin Oriental Singapore, 5 Raffles Ave., Singapore 039797',
