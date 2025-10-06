@@ -1,0 +1,11 @@
+<h1 class="text-5xl">
+  {{ content()?.TITLE }}
+</h1>
+<p-galleria [value]="images()" [autoPlay]="AUTOPLAY" [circular]="CIRCULAR" [responsiveOptions]="responsiveOptions()" [numVisible]="NUMVISIBLE">
+  <ng-template #item let-item>
+    <p-image [src]="'assets/images/' + item.itemImageSrc" class="gallery__item" [preview]="true" [alt]="item.alt" [title]="item.title" />
+  </ng-template>
+  <ng-template #thumbnail let-item>
+    <img [src]="'assets/images/' + item.thumbnailImageSrc" class="gallery__thumbnail" [alt]="item.alt" [title]="item.title" />
+  </ng-template>
+</p-galleria>

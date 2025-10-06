@@ -7,7 +7,7 @@ export const EVENT_INFO_CONTENT: any = {
   },
   sg: {
     DATE: '21 November 2026',
-    VENUE: 'Mandarin Oriental Singapore - Atrium Ballroom',
+    VENUE: 'Mandarin Oriental Singapore - Grand Ballroom',
     TIME: '7:00pm - 10:00pm',
     WELCOME: 'With hearts full of joy, we warmly invite you to join us in celebrating the beginning of our new journey together.'
   }
