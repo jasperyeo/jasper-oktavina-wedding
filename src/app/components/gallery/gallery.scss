@@ -3,6 +3,7 @@
   flex-direction: column;
   gap: 32px;
   margin: 0px auto;
+  padding: 0px 16px;
   max-width: 600px;
 
   &::ng-deep p-galleria .p-galleria-thumbnails-content {
@@ -20,6 +21,10 @@ p {
   text-align: center;
   font-family: Arial, Helvetica, sans-serif;
   color: #454340;
+}
+
+p-galleria {
+  border: 3px solid #ac8c7b;
 }
 
 .gallery {
