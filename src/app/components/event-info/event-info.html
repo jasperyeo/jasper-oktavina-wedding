@@ -2,6 +2,16 @@
   <span class="icon pi pi-calendar"></span><span>{{ content()?.DATE }}</span><br>
   <span class="icon pi pi-map-marker"></span><span>{{ content()?.VENUE }}</span><br>
   <span class="icon pi pi-clock"></span><span>{{ content()?.TIME }}</span>
+  @if (appService.country() === 'sg') {
+    <br>
+    <span class="icon dress-code">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24px" height="20px" aria-hidden="true" focusable="false">
+        <title>Dress Code</title>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M11.02 7.207c.26-.457.915-.734 1.565-.55.64.18.93.697.851 1.141-.085.464-.576.898-1.268.895a.604.604 0 0 0-.08.005.6.6 0 0 0-.687.594v1.613l-5.246 2.963-.002.001-3.064 1.716-.004.002c-.538.307-.779.94-.651 1.519v.002c.132.586.632 1.054 1.268 1.063H20.28c.64 0 1.147-.465 1.283-1.055v-.002c.132-.582-.11-1.217-.647-1.526l-.003-.002-3.02-1.716-2.747-1.556a.6.6 0 0 0-.591 1.045l2.746 1.554 3.017 1.715c.046.027.1.11.075.22-.024.103-.091.123-.113.123H3.717c-.024 0-.089-.024-.112-.125-.023-.109.031-.19.073-.215l3.063-1.716.002-.001 5.535-3.127a.598.598 0 0 0 .287-.376.599.599 0 0 0 .035-.204V9.86c.985-.158 1.836-.851 2.017-1.848.209-1.16-.583-2.194-1.706-2.51-1.11-.313-2.366.113-2.934 1.11a.6.6 0 1 0 1.043.595z" fill="currentColor"></path>
+      </svg>
+    </span>
+    <span>Smart casual</span>
+  }
 </p>
 <p class="text-base">
   {{ content()?.WELCOME }}

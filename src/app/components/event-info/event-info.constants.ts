@@ -6,9 +6,9 @@ export const EVENT_INFO_CONTENT: any = {
     WELCOME: 'Merupakan kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir untuk memberikan doa restu di hari pernikahan kami.'
   },
   sg: {
-    DATE: '09 AUGUST 2026',
-    VENUE: 'MANDARIN ORIENTAL - ATRIUM BALLROOM',
-    TIME: '6PM - 10PM',
+    DATE: '21 November 2026',
+    VENUE: 'Mandarin Oriental Singapore - Grand Ballroom',
+    TIME: '7:00pm - 10:00pm',
     WELCOME: 'With hearts full of joy, we warmly invite you to join us in celebrating the beginning of our new journey together.'
   }
 };

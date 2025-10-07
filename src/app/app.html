@@ -1,19 +1,21 @@
 <main>
   <invitation [country]="country()" (onOpen)="open()" />
-  <header>
+  @if (opened()) {
+    <header>
       <picture>
         <source type="image/webp" [srcset]="content()?.HEADER?.WEBP">
         <img [id]="content()?.HEADER?.ID" [alt]="content()?.HEADER?.ALT"
           [title]="content()?.HEADER?.TITLE" [src]="content()?.HEADER?.PATH" />
       </picture>
-  </header>
-  <router-outlet />
-  <footer>
-    <picture>
-      <source type="image/webp" [srcset]="content()?.FOOTER?.WEBP">
-      <img [id]="content()?.FOOTER?.ID" [alt]="content()?.FOOTER?.ALT"
-        [title]="content()?.FOOTER?.TITLE" [src]="content()?.FOOTER?.PATH" />
-    </picture>
-  </footer>
+    </header>
+    <router-outlet />
+    <footer>
+      <picture>
+        <source type="image/webp" [srcset]="content()?.FOOTER?.WEBP">
+        <img [id]="content()?.FOOTER?.ID" [alt]="content()?.FOOTER?.ALT"
+          [title]="content()?.FOOTER?.TITLE" [src]="content()?.FOOTER?.PATH" />
+      </picture>
+    </footer>
+  }
 </main>
 <div [id]="content()?.CONTAINER_CLASS"></div>
