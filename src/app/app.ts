@@ -5,7 +5,7 @@ import { filter } from 'rxjs';
 import { ButtonModule } from 'primeng/button';
 import { Invitation } from './components/invitation/invitation';
 import { AppService } from './app.service';
-import { HEART_RAIN_ATTRIBUTES, HEADER_AND_FOOTER } from './app.constants';
+import { DEFAULT_COUNTRY, HEADER_AND_FOOTER } from './app.constants';
 
 @Component({
   selector: 'app-root',
@@ -39,7 +39,7 @@ export class App implements OnInit {
       filter(event => event instanceof NavigationEnd)
     ).subscribe((event: NavigationEnd) => {
       const country: string = event.urlAfterRedirects.substring(1);
-      this.country.set(!this._langMap[country] ? 'id' : country);
+      this.country.set(!this._langMap[country] ? DEFAULT_COUNTRY : country);
       this._appService.country.set(this.country());
       this._document.documentElement.lang = this._langMap[this.country()];
     });

@@ -67,3 +67,5 @@ export const HEADER_AND_FOOTER: any = {
     WEBP: 'assets/images/footer-flowers-full.webp'
   }
 }
+
+export const DEFAULT_COUNTRY: string = 'sg';

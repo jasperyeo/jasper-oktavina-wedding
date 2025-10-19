@@ -9,10 +9,10 @@ export const LOCATION_CONTENT: any = {
   },
   sg: {
     TITLE: 'location',
-    NAME: 'Mandarin Oriental Singapore - Grand Ballroom',
-    GMAP_URL: 'https://maps.app.goo.gl/TfiUiXn4S2CHjD4a9',
+    NAME: 'One Farrer Hotel - Grand Ballroom',
+    GMAP_URL: 'https://maps.app.goo.gl/cmwG5NiRn7ZvWWBH7',
     GMAP_TITLE: 'Location',
-    GMAP_ADDRESS: 'Mandarin Oriental Singapore, 5 Raffles Ave., Singapore 039797',
-    GMAP_EMBED: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.8067653177773!2d103.85502627597297!3d1.2902236617625211!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da19a860b5b6b7%3A0x2030f2353a974ed5!2sMandarin%20Oriental%2C%20Singapore!5e0!3m2!1sen!2ssg!4v1755713214183!5m2!1sen!2ssg'
+    GMAP_ADDRESS: 'One Farrer Hotel, 1 Farrer Park Station Rd, Singapore 217562',
+    GMAP_EMBED: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.771453892597!2d103.85179827597999!3d1.3125510616924996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da19c677cf7f6f%3A0xc21ef0b48ffd7759!2sOne%20Farrer%20Hotel!5e0!3m2!1sen!2ssg!4v1760855877714!5m2!1sen!2ssg'
   }
 };

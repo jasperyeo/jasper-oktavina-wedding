@@ -20,20 +20,20 @@ export const COUNTDOWN_CONTENT: any = {
   },
   sg: {
     TITLE: 'countdown',
-    DATE: '21 November 2026',
+    DATE: '28 November 2026',
     TIME: '7pm - 10pm',
     DAY: 'DAY(S)',
     HOUR: 'HOUR(S)',
     MINUTE: 'MINUTE(S)',
     SECOND: 'SECOND(S)',
     ADD_TO_CALENDAR: 'Add to calendar',
-    COUNTDOWN_DATETIME: 'Nov 21, 2026 19:00:00',
-    CALENDAR_DATETIME: [2026, 11, 21, 19, 0],
+    COUNTDOWN_DATETIME: 'Nov 28, 2026 19:00:00',
+    CALENDAR_DATETIME: [2026, 11, 28, 19, 0],
     CALENDAR_DURATION: { hours: 3, minutes: 0 },
     CALENDAR_TITLE: 'Jasper & Oktavina Wedding',
     CALENDAR_DESCRIPTION: 'Jasper & Oktavina Wedding',
-    CALENDAR_LOCATION: 'Mandarin Oriental Singapore - Atrium Ballroom',
-    CALENDAR_GEO: { lat: 1.2904864515842214, lon: 103.85762265427365 }, // 1.2904864515842214, 103.85762265427365
+    CALENDAR_LOCATION: 'One Farrer Hotel - Grand Ballroom',
+    CALENDAR_GEO: { lat: 1.3128031231679183, lon: 103.85433028116816 }, // 1.3128031231679183, 103.85433028116816
     CALENDAR_STATUS: 'BUSY',
     CALENDAR_ORGANIZER: { name: 'Jasper', email: 'jasper.yeo.personal@gmail.com' }
   }
