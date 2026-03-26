@@ -1,15 +1,11 @@
 :host {
   display: block;
-  width: 100lvw;
-  height: 100lvh;
+  width: 100dvw;
+  height: 100dvh;
   position: fixed;
   top: 0;
   left: 0;
   z-index: 2;
-  background-image: image-set(
-    url('/jasper-oktavina-wedding/assets/images/background-tile.webp') type('image/webp'),
-    url('/jasper-oktavina-wedding/assets/images/background-tile.jpg') type('image/jpeg')
-  );
   background-repeat: repeat;
 
   &.opened {
@@ -17,6 +13,20 @@
     height: 0px;
     top: -100%;
     opacity: .2;
+  }
+
+  &.id {
+    background-image: image-set(
+      url('/jasper-oktavina-wedding/assets/images/background-tile-id.webp') type('image/webp'),
+      url('/jasper-oktavina-wedding/assets/images/background-tile-id.jpg') type('image/jpeg')
+    );
+  }
+
+  &.sg {
+    background-image: image-set(
+      url('/jasper-oktavina-wedding/assets/images/background-tile-sg.webp') type('image/webp'),
+      url('/jasper-oktavina-wedding/assets/images/background-tile-sg.png') type('image/png')
+    );
   }
 }
 
@@ -68,6 +78,7 @@ img {
   &__header {
     max-width: 90vw;
     aspect-ratio: auto 800 / 311;
+    filter: drop-shadow(gray 8px 8px 5px);
 
     @media (min-width: 769px) {
       max-width: 800px;
@@ -77,6 +88,7 @@ img {
   &__footer {
     max-width: 90vw;
     aspect-ratio: auto 800 / 158;
+    filter: drop-shadow(gray 8px 8px 5px);
 
     @media (min-width: 769px) {
       max-width: 800px;

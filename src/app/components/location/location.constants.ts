@@ -9,7 +9,7 @@ export const LOCATION_CONTENT: any = {
   },
   sg: {
     TITLE: 'location',
-    NAME: 'One Farrer Hotel - Grand Ballroom',
+    NAME: 'One Farrer Hotel - Napier Grand Ballroom, Level 6',
     GMAP_URL: 'https://maps.app.goo.gl/cmwG5NiRn7ZvWWBH7',
     GMAP_TITLE: 'Location',
     GMAP_ADDRESS: '1 Farrer Park Station Rd, Singapore 217562',

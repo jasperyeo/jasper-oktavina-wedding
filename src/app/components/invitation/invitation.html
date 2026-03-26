@@ -4,7 +4,7 @@
     <img [id]="content()?.HEADER?.ID" [alt]="content()?.HEADER?.ALT"
       [title]="content()?.HEADER?.TITLE" [src]="content()?.HEADER?.PATH" />
   </picture>
-  <div id="invitation__content">
+  <div id="invitation__content" [class]="country()">
     <p class="text-lg">
       {{ content()?.PRE_NAME }}
     </p>

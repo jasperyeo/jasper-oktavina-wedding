@@ -1,13 +1,25 @@
 main {
-  background-image: image-set(
-    url('/jasper-oktavina-wedding/assets/images/background-tile.webp') type('image/webp'),
-    url('/jasper-oktavina-wedding/assets/images/background-tile.jpg') type('image/jpeg')
-  );
   background-repeat: repeat;
+
+  &.id {
+    background-image: image-set(
+      url('/jasper-oktavina-wedding/assets/images/background-tile-id.webp') type('image/webp'),
+      url('/jasper-oktavina-wedding/assets/images/background-tile-id.jpg') type('image/jpeg')
+    );
+  }
+  
+  &.sg {
+    background-image: image-set(
+      url('/jasper-oktavina-wedding/assets/images/background-tile-sg.webp') type('image/webp'),
+      url('/jasper-oktavina-wedding/assets/images/background-tile-sg.png') type('image/png')
+    );
+    background-repeat: repeat;
+  }
 }
 
 img {
   margin: 0px auto;
+  filter: drop-shadow(gray 8px 8px 5px);
 }
 
 #image {

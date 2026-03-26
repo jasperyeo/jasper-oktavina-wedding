@@ -11,7 +11,7 @@ export const GALLERY_CONTENT: any = {
     ITEM_ALT: 'Prewed Shoot at Singapore',
     ITEM_TITLE: 'Prewed Shoot at Singapore',
     ITEM_SRC_PREFIX: 'prewed-sg-',
-    ITEM_COUNT: 0
+    ITEM_COUNT: 10
   }
 };
 

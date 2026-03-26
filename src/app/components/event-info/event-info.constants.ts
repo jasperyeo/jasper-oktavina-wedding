@@ -7,8 +7,9 @@ export const EVENT_INFO_CONTENT: any = {
   },
   sg: {
     DATE: '28 November 2026',
-    VENUE: 'One Farrer Hotel - Grand Ballroom',
-    TIME: '7:00pm - 10:00pm',
+    VENUE: 'One Farrer Hotel - Napier Grand Ballroom, Level 6',
+    COCKTAIL: 'Cocktail: 6:30pm - 7:00pm',
+    TIME: 'Dinner: 7:00pm - 10:00pm',
     WELCOME: 'With hearts full of joy, we warmly invite you to join us in celebrating the beginning of our new journey together.'
   }
 };

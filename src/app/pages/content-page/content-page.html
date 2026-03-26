@@ -5,9 +5,6 @@
     <parents-info />
   }
   <event-info />
-  @if (appService.country() === 'sg') {
-    <rsvp-form />
-  }
   <separator />
   <location />
   @if (appService.country() === 'sg') {
@@ -20,3 +17,6 @@
   <countdown />
 </section>
 <music-player />
+@if (appService.country() === 'sg') {
+  <rsvp-form />
+}

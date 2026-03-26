@@ -1,5 +1,5 @@
-import { ApplicationConfig, provideBrowserGlobalErrorListeners, provideZoneChangeDetection, provideZonelessChangeDetection } from '@angular/core';
-import { provideRouter } from '@angular/router';
+import { ApplicationConfig, provideBrowserGlobalErrorListeners, provideZonelessChangeDetection } from '@angular/core';
+import { provideRouter, withInMemoryScrolling } from '@angular/router';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { providePrimeNG } from 'primeng/config';
@@ -14,9 +14,11 @@ export const appConfig: ApplicationConfig = {
   providers: [
     provideBrowserGlobalErrorListeners(),
     provideZonelessChangeDetection(),
-    // provideZoneChangeDetection({ eventCoalescing: true }),
     [Location, {provide: LocationStrategy, useClass: HashLocationStrategy}],
-    provideRouter(routes),
+    provideRouter(routes, withInMemoryScrolling({
+      anchorScrolling: 'enabled',
+      scrollPositionRestoration: 'enabled'
+    })),
     provideAnimationsAsync(),
       providePrimeNG({
         theme: {

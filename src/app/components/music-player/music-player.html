@@ -2,7 +2,7 @@
   <source [src]="content()?.BG_MUSIC_PATH" type="audio/mp3">
 </audio>
 
-<button pButton (click)="toggleMusic()" [raised]="true"
+<p-button (click)="toggleMusic()" [raised]="true" rounded
   [class.pulse]="isPlaying()" severity="secondary">
   <span pButtonLabel>
     @if (isPlaying()) {
@@ -11,4 +11,4 @@
       🔇
     }
   </span>
-</button>
+</p-button>
