@@ -1,20 +1,42 @@
 <section>
-  <cultural-logo-intro />
-  <character-intro />
+  <cultural-logo-intro pAnimateOnScroll
+    enterClass="animate-enter fade-in-10 zoom-in-50 animate-duration-1000"
+    leaveClass="animate-leave fade-out-0" />
+  <character-intro pAnimateOnScroll
+    enterClass="animate-enter fade-in-10 zoom-in-50 animate-duration-1000"
+    leaveClass="animate-leave fade-out-0" />
   @if (appService.country() === 'id') {
-    <parents-info />
+    <parents-info pAnimateOnScroll
+      enterClass="animate-enter fade-in-10 zoom-in-50 animate-duration-1000"
+      leaveClass="animate-leave fade-out-0" />
   }
-  <event-info />
-  <separator />
+  <event-info pAnimateOnScroll
+    enterClass="animate-enter fade-in-10 zoom-in-50 animate-duration-1000"
+    leaveClass="animate-leave fade-out-0"/>
+  <separator pAnimateOnScroll
+    enterClass="animate-enter fade-in-10 zoom-in-50 animate-duration-1000"
+    leaveClass="animate-leave fade-out-0" />
   <location />
   @if (appService.country() === 'sg') {
-    <separator />
-    <getting-here />
+    <separator pAnimateOnScroll
+      enterClass="animate-enter fade-in-10 zoom-in-50 animate-duration-1000"
+      leaveClass="animate-leave fade-out-0" />
+    <getting-here pAnimateOnScroll
+      enterClass="animate-enter fade-in-10 zoom-in-50 animate-duration-1000"
+      leaveClass="animate-leave fade-out-0" />
   }
-  <separator />
-  <gallery />
-  <separator />
-  <countdown />
+  <separator pAnimateOnScroll
+    enterClass="animate-enter fade-in-10 zoom-in-50 animate-duration-1000"
+    leaveClass="animate-leave fade-out-0" />
+  <gallery pAnimateOnScroll
+    enterClass="animate-enter fade-in-10 zoom-in-50 animate-duration-1000"
+    leaveClass="animate-leave fade-out-0" />
+  <separator pAnimateOnScroll
+    enterClass="animate-enter fade-in-10 zoom-in-50 animate-duration-1000"
+    leaveClass="animate-leave fade-out-0" />
+  <countdown pAnimateOnScroll
+    enterClass="animate-enter fade-in-10 zoom-in-50 animate-duration-1000"
+    leaveClass="animate-leave fade-out-0" />
 </section>
 <music-player />
 @if (appService.country() === 'sg') {
