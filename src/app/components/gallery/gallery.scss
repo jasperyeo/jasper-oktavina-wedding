@@ -23,10 +23,6 @@ p {
   color: #454340;
 }
 
-p-galleria {
-  border: 3px solid #ac8c7b;
-}
-
 .gallery {
 
   &__item {
@@ -38,4 +34,8 @@ p-galleria {
     display: inline-flex;
     width: 200px;
   }
+}
+
+:host::ng-deep p-galleria .p-galleria-items {
+  height: 50vh;
 }
