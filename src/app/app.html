@@ -1,4 +1,4 @@
-<main>
+<main [class]="country()">
   <invitation [country]="country()" (onOpen)="open()" />
   @if (opened()) {
     <header>
@@ -18,4 +18,3 @@
     </footer>
   }
 </main>
-<div [id]="content()?.CONTAINER_CLASS"></div>

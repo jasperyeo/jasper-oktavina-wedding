@@ -25,6 +25,15 @@ export class Gallery implements OnInit {
   public readonly NUMVISIBLE = NUMVISIBLE;
 
   public ngOnInit(): void {
-   this.images.set(this.content().ITEMS); 
+    let images: any[] = [];
+    for (let i = 1; i <= this.content().ITEM_COUNT; i++) {
+      images.push({
+        thumbnailImageSrc: this.content().ITEM_SRC_PREFIX + i + '.webp',
+        itemImageSrc: this.content().ITEM_SRC_PREFIX + i + '.webp',
+        alt: this.content().ITEM_ALT,
+        title: this.content().ITEM_TITLE
+      });
+    }
+    this.images.set(images); 
   }
 }

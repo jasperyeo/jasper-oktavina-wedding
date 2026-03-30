@@ -1,4 +1,4 @@
-button {
+p-button {
   z-index: 1;
   position: fixed;
   width: 42px;
@@ -6,7 +6,6 @@ button {
   bottom: 16px;
   right: 16px;
   border-radius: 50%;
-  filter: drop-shadow(gray 16px 16px 10px);
 }
 
 .pulse {

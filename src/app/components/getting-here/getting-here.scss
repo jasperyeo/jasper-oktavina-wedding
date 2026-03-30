@@ -16,3 +16,29 @@ p {
   font-family: Arial, Helvetica, sans-serif;
   color: #454340;
 }
+
+.icon {
+  margin-right: 8px;
+}
+
+a {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+p-tag {
+  transform: scale(0.7);
+  margin: 0px 1px;
+  margin-bottom: 1px;
+}
+
+p-table {
+  * {
+    border-color: #ac8c7b;
+  }
+
+  tr, th, td {
+    background-color: transparent;
+    padding: 2px 8px;
+  }
+}

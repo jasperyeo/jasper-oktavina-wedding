@@ -11,12 +11,9 @@ p {
   color: #454340;
 }
 
-#text {
-
-  &__parents {
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
-    gap: 16px;
-  }
+#parents-info {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  gap: 16px;
 }
