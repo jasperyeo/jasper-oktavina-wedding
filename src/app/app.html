@@ -1,5 +1,7 @@
 <main [class]="country()">
-  <invitation [country]="country()" (onOpen)="open()" />
+  @if (country().length > 0) {
+    <invitation [country]="country()" (onOpen)="open()" />
+  }
   @if (opened()) {
     <header>
       <picture>

@@ -3,6 +3,7 @@
   flex-direction: column;
   gap: 32px;
   margin: 0px 16px;
+  align-items: center;
 }
 
 h1 {
@@ -39,5 +40,13 @@ p {
     p {
       margin-top: 24px;
     }
+  }
+}
+
+button {
+  width: 100%;
+
+  @media (min-width: 769px) {
+    width: fit-content;
   }
 }
