@@ -1,5 +1,11 @@
 <h1 class="text-5xl" id="gallery">
   {{ content()?.TITLE }}
+  @if (content()?.TITLE_CN) {
+    <span class="text-3xl">
+      <br>
+      {{ content()?.TITLE_CN }}
+    </span>
+  }
 </h1>
 <p-galleria [value]="images()" [autoPlay]="AUTOPLAY" [circular]="CIRCULAR" [responsiveOptions]="responsiveOptions()" [numVisible]="NUMVISIBLE"
   [containerStyle]="{'width': '80%', 'margin': 'auto'}" [showItemNavigators]="true" [showItemNavigatorsOnHover]="true">

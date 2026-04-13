@@ -8,6 +8,7 @@ export const GALLERY_CONTENT: any = {
   },
   sg: {
     TITLE: 'gallery',
+    TITLE_CN: '圖庫',
     ITEM_ALT: 'Prewed Shoot at Singapore',
     ITEM_TITLE: 'Prewed Shoot at Singapore',
     ITEM_SRC_PREFIX: 'prewed-sg-',

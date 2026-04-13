@@ -9,6 +9,7 @@ export const LOCATION_CONTENT: any = {
   },
   sg: {
     TITLE: 'location',
+    TITLE_CN: '地點',
     NAME: 'One Farrer Hotel - Napier Grand Ballroom, Level 6',
     GMAP_URL: 'https://maps.app.goo.gl/cmwG5NiRn7ZvWWBH7',
     GMAP_TITLE: 'Location',

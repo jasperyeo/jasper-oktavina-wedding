@@ -1,5 +1,11 @@
 <h1 class="text-5xl" id="getting-here">
   {{ content()?.HEADING }}
+  @if (content()?.HEADING_CN) {
+    <span class="text-3xl">
+      <br>
+      {{ content()?.HEADING_CN }}
+    </span>
+  }
 </h1>
 
 <div>
