@@ -1,5 +1,11 @@
 <h1 class="text-5xl" id="location">
   {{ content()?.TITLE }}
+  @if (content()?.TITLE_CN) {
+    <span class="text-3xl">
+      <br>
+      {{ content()?.TITLE_CN }}
+    </span>
+  }
 </h1>
 <p class="text-lg">
   <span class="icon pi pi-map-marker"></span><span>{{ content()?.NAME }}</span><br>
