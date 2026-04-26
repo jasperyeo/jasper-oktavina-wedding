@@ -12,6 +12,6 @@ export const EVENT_INFO_CONTENT: any = {
     COCKTAIL: 'Cocktail / 酒會: 6:30pm - 7:00pm',
     TIME: 'Dinner / 晚宴: 7:00pm - 10:00pm',
     WELCOME: 'With hearts full of joy, we warmly invite you to join us in celebrating the beginning of our new journey together.\n我們滿懷喜悅，誠摯邀請您與我們一同慶祝我們攜手開啟人生新篇章。',
-    COPIED: 'Hashtag has been copied! / Hashtag 已複製！'
+    COPIED: 'Hashtag has been copied!\nHashtag 已複製！'
   }
 };

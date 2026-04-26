@@ -21,7 +21,7 @@ export class EventInfo {
 
   public copyHashtag(): void {
     navigator.clipboard.writeText('#LifeIsJasOkWithYou');
-    this.messageService.add({ severity: 'success', summary: 'Success', detail: this.content().COPIED });
+    this.messageService.add({ severity: 'success', summary: this.content().COPIED });
   }
 
 }
