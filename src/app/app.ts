@@ -2,7 +2,6 @@ import { Component, computed, inject, OnInit, signal, WritableSignal } from '@an
 import { DOCUMENT } from '@angular/common';
 import { NavigationEnd, Router, RouterOutlet } from '@angular/router';
 import { filter } from 'rxjs';
-import { ButtonModule } from 'primeng/button';
 import { Invitation } from './components/invitation/invitation';
 import { AppService } from './app.service';
 import { DEFAULT_COUNTRY, HEADER_AND_FOOTER } from './app.constants';
@@ -11,7 +10,6 @@ import { DEFAULT_COUNTRY, HEADER_AND_FOOTER } from './app.constants';
   selector: 'app-root',
   imports: [
     RouterOutlet,
-    ButtonModule,
     Invitation
 ],
   templateUrl: './app.html',

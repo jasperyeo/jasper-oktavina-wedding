@@ -25,7 +25,7 @@
     <p class="text-lg">
       {{ content()?.POST_NAME_2 }}
     </p>
-    <button pButton (click)="openInvitation()">
+    <p-button (click)="openInvitation()">
       <span pButtonLabel>
         <span class="icon">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="16px" height="16px" fill="white" aria-hidden="true" focusable="false">
@@ -35,7 +35,7 @@
         </span>
         <span>{{ content()?.BUTTON }}</span><br>
       </span>
-    </button>
+    </p-button>
   </div>
   <picture>
     <source type="image/webp" [srcset]="content()?.FOOTER?.WEBP">

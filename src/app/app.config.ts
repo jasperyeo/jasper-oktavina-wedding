@@ -20,17 +20,17 @@ export const appConfig: ApplicationConfig = {
       scrollPositionRestoration: 'enabled'
     })),
     provideAnimationsAsync(),
-      providePrimeNG({
-        theme: {
-          preset: rosePreset,
-          options: {
-            prefix: 'p',
-            // darkModeSelector: 'system',
-            darkModeSelector: false || 'none',
-            cssLayer: false
-          }
-        },
-        ripple: true
-      })
+    providePrimeNG({
+      theme: {
+        preset: rosePreset,
+        options: {
+          prefix: 'p',
+          // darkModeSelector: 'system',
+          darkModeSelector: false || 'none',
+          cssLayer: false
+        }
+      },
+      ripple: true
+    })
   ]
 };

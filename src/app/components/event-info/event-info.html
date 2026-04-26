@@ -9,6 +9,9 @@
 <p class="text-base">
   {{ content()?.WELCOME }}
 </p>
-<p class="text-base">
-  <span class="icon pi pi-instagram"></span><span>#LifeIsJasOkWithYou</span><br>
-</p>
+<p-toast />
+<p-button link (click)="copyHashtag()">
+  <p class="text-base">
+    <span class="icon pi pi-instagram"></span><span>#LifeIsJasOkWithYou</span><span class="icon pi pi-clone"></span><br>
+  </p>
+</p-button>

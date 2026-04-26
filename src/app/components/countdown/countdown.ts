@@ -1,5 +1,5 @@
 import { AfterViewInit, Component, computed, inject, Signal, signal, WritableSignal } from '@angular/core';
-import { ButtonModule } from 'primeng/button';
+import { Button } from 'primeng/button';
 import { createEvent } from 'ics';
 import { AppService } from '../../app.service';
 import { COUNTDOWN_CONTENT } from './countdown.constants';
@@ -7,9 +7,7 @@ import { COUNTDOWN_CONTENT } from './countdown.constants';
 @Component({
   standalone: true,
   selector: 'countdown',
-  imports: [
-    ButtonModule
-  ],
+  imports: [ Button ],
   templateUrl: './countdown.html',
   styleUrl: './countdown.scss'
 })
