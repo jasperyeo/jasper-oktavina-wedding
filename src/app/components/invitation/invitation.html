@@ -14,7 +14,7 @@
         <source type="image/webp" [srcset]="content()?.COUPLE_NAME_WEBP">
         <img [id]="content()?.COUPLE_NAME_ID" [alt]="content()?.COUPLE_NAME_ALT"
           [title]="content()?.COUPLE_NAME_TITLE" [src]="content()?.COUPLE_NAME_PATH"
-          fetchpriority="high" />
+          fetchpriority="high" loading="eager" />
       </picture>
     } @else {
       <div id="invitation__name-placeholder"></div>
@@ -41,6 +41,6 @@
     <source type="image/webp" [srcset]="content()?.FOOTER?.WEBP">
     <img [id]="content()?.FOOTER?.ID" [alt]="content()?.FOOTER?.ALT"
       [title]="content()?.FOOTER?.TITLE" [src]="content()?.FOOTER?.PATH"
-      fetchpriority="high" />
+      fetchpriority="high" loading="eager" />
   </picture>
 </div>
