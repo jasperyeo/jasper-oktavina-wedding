@@ -84,7 +84,7 @@ img {
 
   &__header {
     max-width: 90vw;
-    aspect-ratio: auto 800 / 311;
+    aspect-ratio: 800 / 311;
     filter: drop-shadow(gray 8px 8px 5px);
 
     @media (min-width: 769px) {
@@ -94,7 +94,7 @@ img {
 
   &__footer {
     max-width: 90vw;
-    aspect-ratio: auto 800 / 158;
+    aspect-ratio: 800 / 158;
     filter: drop-shadow(gray 8px 8px 5px);
 
     @media (min-width: 769px) {
@@ -105,7 +105,7 @@ img {
   &__couple {
     max-width: 1000px;
     width: 100%;
-    aspect-ratio: auto 968 / 139;
+    aspect-ratio: 968 / 139;
   }
 }
 
