@@ -29,8 +29,13 @@
   Wedding site of Jasper and Oktavina.
 </p>
 <p align="center">
-  <a href="https://jasperyeo.github.io/jasper-oktavina-wedding/" target="_blank" title="https://jasperyeo.github.io/jasper-oktavina-wedding/">
-    https://jasperyeo.github.io/jasper-oktavina-wedding/
+  🇸🇬 SG: <a href="https://jasperyeo.github.io/jasper-oktavina-wedding/#/sg" target="_blank" title="https://jasperyeo.github.io/jasper-oktavina-wedding/#/sg">
+    https://jasperyeo.github.io/jasper-oktavina-wedding/#/sg
+  </a>
+</p>
+<p align="center">
+  🇮🇩 ID: <a href="https://jasperyeo.github.io/jasper-oktavina-wedding/#/id" target="_blank" title="https://jasperyeo.github.io/jasper-oktavina-wedding/#/id">
+    https://jasperyeo.github.io/jasper-oktavina-wedding/#/id
   </a>
 </p>
 
