@@ -3,7 +3,7 @@
     <source type="image/webp" [srcset]="content()?.HEADER?.WEBP">
     <img [id]="content()?.HEADER?.ID" [alt]="content()?.HEADER?.ALT"
       [title]="content()?.HEADER?.TITLE" [src]="content()?.HEADER?.PATH"
-      fetchpriority="high" />
+      fetchpriority="high" loading="eager" />
   </picture>
   <div id="invitation__content" [class]="country()">
     <p class="text-lg">
