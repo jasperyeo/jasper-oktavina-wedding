@@ -3,7 +3,7 @@
     <source type="image/webp" [srcset]="content()?.HEADER?.WEBP">
     <img [id]="content()?.HEADER?.ID" [alt]="content()?.HEADER?.ALT"
       [title]="content()?.HEADER?.TITLE" [src]="content()?.HEADER?.PATH"
-      fetchpriority="high" />
+      fetchpriority="high" loading="eager" />
   </picture>
   <div id="invitation__content" [class]="country()">
     <p class="text-lg">
@@ -14,7 +14,7 @@
         <source type="image/webp" [srcset]="content()?.COUPLE_NAME_WEBP">
         <img [id]="content()?.COUPLE_NAME_ID" [alt]="content()?.COUPLE_NAME_ALT"
           [title]="content()?.COUPLE_NAME_TITLE" [src]="content()?.COUPLE_NAME_PATH"
-          fetchpriority="high" />
+          fetchpriority="high" loading="eager" />
       </picture>
     } @else {
       <div id="invitation__name-placeholder"></div>
@@ -25,7 +25,7 @@
     <p class="text-lg">
       {{ content()?.POST_NAME_2 }}
     </p>
-    <button pButton (click)="openInvitation()">
+    <p-button (click)="openInvitation()">
       <span pButtonLabel>
         <span class="icon">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="16px" height="16px" fill="white" aria-hidden="true" focusable="false">
@@ -35,12 +35,12 @@
         </span>
         <span>{{ content()?.BUTTON }}</span><br>
       </span>
-    </button>
+    </p-button>
   </div>
   <picture>
     <source type="image/webp" [srcset]="content()?.FOOTER?.WEBP">
     <img [id]="content()?.FOOTER?.ID" [alt]="content()?.FOOTER?.ALT"
       [title]="content()?.FOOTER?.TITLE" [src]="content()?.FOOTER?.PATH"
-      fetchpriority="high" />
+      fetchpriority="high" loading="eager" />
   </picture>
 </div>

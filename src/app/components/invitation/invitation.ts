@@ -1,5 +1,5 @@
 import { Component, computed, HostBinding, input, InputSignal, output, OutputEmitterRef } from '@angular/core';
-import { ButtonModule } from 'primeng/button';
+import { Button } from 'primeng/button';
 import { INVITATION_CONTENT } from './invitation.constants';
 import { CHARACTER_INTRO_CONTENT } from '../character-intro/character-intro.constants';
 import { HEADER_AND_FOOTER } from '../../app.constants';
@@ -7,9 +7,7 @@ import { HEADER_AND_FOOTER } from '../../app.constants';
 @Component({
   standalone: true,
   selector: 'invitation',
-  imports: [
-    ButtonModule
-  ],
+  imports: [ Button ],
   templateUrl: './invitation.html',
   styleUrl: './invitation.scss'
 })

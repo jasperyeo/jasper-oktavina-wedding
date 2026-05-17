@@ -1,14 +1,12 @@
 import { AfterViewInit, Component, computed, HostListener, inject, signal, WritableSignal } from '@angular/core';
-import { ButtonModule } from 'primeng/button';
+import { Button } from 'primeng/button';
 import { AppService } from '../../app.service';
 import { MUSIC_PLAYER_CONTENT } from './music-player.constants';
 
 @Component({
   standalone: true,
   selector: 'music-player',
-  imports: [
-    ButtonModule
-  ],
+  imports: [ Button ],
   templateUrl: './music-player.html',
   styleUrl: './music-player.scss'
 })

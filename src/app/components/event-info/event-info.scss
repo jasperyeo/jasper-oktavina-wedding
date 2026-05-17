@@ -3,6 +3,7 @@
   flex-direction: column;
   gap: 32px;
   margin: 0px 16px;
+  align-items: center;
 }
 
 p {
@@ -13,7 +14,7 @@ p {
 }
 
 .icon {
-  margin-right: 16px;
+  margin: 0px 16px;
 
   &.dress-code {
     display: inline-block;
