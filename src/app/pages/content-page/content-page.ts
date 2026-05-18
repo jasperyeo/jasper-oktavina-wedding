@@ -31,7 +31,7 @@ import { Gallery } from "../../components/gallery/gallery";
     Gallery
 ],
   templateUrl: './content-page.html',
-  styleUrl: './content-page.scss'
+  styleUrls: ['./content-page.scss', './stars.scss']
 })
 export class ContentPage {
 

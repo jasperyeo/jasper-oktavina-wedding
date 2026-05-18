@@ -1,0 +1,137 @@
+@keyframes star-float-1 {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  25% {
+    transform: translate3d(120px, -320px, 0);
+  }
+  50% {
+    transform: translate3d(-90px, -860px, 0);
+  }
+  75% {
+    transform: translate3d(180px, -1400px, 0);
+  }
+  100% {
+    transform: translate3d(-140px, -2040px, 0);
+  }
+}
+
+@keyframes star-float-2 {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  20% {
+    transform: translate3d(-150px, -220px, 0);
+  }
+  45% {
+    transform: translate3d(110px, -760px, 0);
+  }
+  70% {
+    transform: translate3d(-100px, -1320px, 0);
+  }
+  100% {
+    transform: translate3d(200px, -1920px, 0);
+  }
+}
+
+@keyframes star-float-3 {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  25% {
+    transform: translate3d(100px, -260px, 0);
+  }
+  50% {
+    transform: translate3d(-180px, -780px, 0);
+  }
+  75% {
+    transform: translate3d(140px, -1320px, 0);
+  }
+  100% {
+    transform: translate3d(-220px, -2100px, 0);
+  }
+}
+
+@keyframes star-blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  25%, 60% {
+    opacity: 0.15;
+  }
+  30%, 70% {
+    opacity: 0.95;
+  }
+}
+
+@function multiple-box-shadow($number_of_stars) {
+  $value: "#{random(3000)}px #{random(2000)}px #9F1239";
+  @for $i from 2 through $number_of_stars {
+    $value: "#{$value}, #{random(3000)}px #{random(2000)}px #9F1239";
+  }
+  @return unquote($value);
+}
+
+$shadows-small: multiple-box-shadow(280);
+$shadows-medium: multiple-box-shadow(90);
+$shadows-big: multiple-box-shadow(40);
+
+.star-layers {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  pointer-events: none;
+
+  .star-layer {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    border-radius: 50%;
+    background: transparent;
+
+    &::after {
+      content: " ";
+      position: absolute;
+      top: 2000px;
+      width: 1px;
+      height: 1px;
+    }
+  }
+
+  #stars1 {
+    box-shadow: $shadows-small;
+    animation: star-float-1 50s linear infinite, 1s star-blink 3s linear infinite;
+    animation-delay: 0s, #{random(3)}s;
+    &::after {
+      box-shadow: $shadows-small;
+    }
+  }
+
+  #stars2 {
+    width: 2px;
+    height: 2px;
+    box-shadow: $shadows-medium;
+    animation: star-float-2 100s linear infinite, 1s star-blink 2s linear infinite;
+    animation-delay: 0s, #{random(2)}s;
+    &::after {
+      width: 2px;
+      height: 2px;
+      box-shadow: $shadows-medium;
+    }
+  }
+
+  #stars3 {
+    width: 3px;
+    height: 3px;
+    box-shadow: $shadows-big;
+    animation: star-float-3 150s linear infinite, 1s star-blink 1.5s linear infinite;
+    animation-delay: 0s, #{random(2)}s;
+    &::after {
+      width: 3px;
+      height: 3px;
+      box-shadow: $shadows-big;
+    }
+  }
+}
