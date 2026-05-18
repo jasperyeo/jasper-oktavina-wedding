@@ -34,12 +34,13 @@ p {
   &__number {
     width: 80px;
     height: 80px;
-    border-radius: 8px;
-    border: 1px solid #ac8c7b;
+    // border-radius: 8px;
+    // border: 1px solid #ac8c7b;
     line-height: 4.8;
 
-    p {
-      margin-top: 24px;
+    .number {
+      color: #ac8c7b;
+      font-family: 'josephsophia', 'Hannotate TC', 'Arial', 'Helvetica', sans-serif;
     }
   }
 }

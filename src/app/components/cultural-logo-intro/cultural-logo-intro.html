@@ -5,7 +5,15 @@
     [width]="content()?.LOGO_IMAGE_WIDTH" [height]="content()?.LOGO_IMAGE_HEIGHT"
     [class.small]="appService.country() === 'sg'" />
 </picture>
+<h1 class="text-5xl" id="cultural-logo-intro">
+  {{ content()?.TITLE }}
+  @if (content()?.TITLE_CN) {
+    <span class="text-3xl">
+      <br>
+      {{ content()?.TITLE_CN }}
+    </span>
+  }
+</h1>
 <p class="text-base">
-  {{ content()?.INTRO_TEXT_1 }}<br><br>
-  {{ content()?.INTRO_TEXT_2 }}
+  {{ content()?.INTRO_TEXT }}
 </p>
