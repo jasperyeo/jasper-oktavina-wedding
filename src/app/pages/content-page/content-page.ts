@@ -12,6 +12,7 @@ import { MusicPlayer } from '../../components/music-player/music-player';
 import { GettingHere } from '../../components/getting-here/getting-here';
 import { AppService } from '../../app.service';
 import { Gallery } from "../../components/gallery/gallery";
+import { QnA } from '../../components/qna/qna';
 
 @Component({
   standalone: true,
@@ -28,7 +29,8 @@ import { Gallery } from "../../components/gallery/gallery";
     Countdown,
     MusicPlayer,
     GettingHere,
-    Gallery
+    Gallery,
+    QnA
 ],
   templateUrl: './content-page.html',
   styleUrls: ['./content-page.scss', './stars.scss']
