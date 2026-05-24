@@ -33,3 +33,35 @@ p {
     }
   }
 }
+
+picture {
+  width: fit-content;
+  margin: 0px auto;
+  cursor: pointer;
+  transition: all 0.1s ease-in-out;
+
+  &:hover {
+    filter: drop-shadow(#ac8c7b 0 0 1px);
+    animation: horizontal-shaking 0.35s linear;
+  }
+
+  &.tilt-n-move-shaking {
+    animation: tilt-n-move-shaking 0.25s linear;
+  }
+}
+
+@keyframes horizontal-shaking {
+  0% { transform: translateX(0) }
+  25% { transform: translateX(5px) }
+  50% { transform: translateX(-5px) }
+  75% { transform: translateX(5px) }
+  100% { transform: translateX(0) }
+}
+
+@keyframes tilt-n-move-shaking {
+  0% { transform: translate(0, 0) rotate(0deg); }
+  25% { transform: translate(5px, 5px) rotate(5deg); }
+  50% { transform: translate(0, 0) rotate(0eg); }
+  75% { transform: translate(-5px, 5px) rotate(-5deg); }
+  100% { transform: translate(0, 0) rotate(0deg); }
+}

@@ -1,4 +1,4 @@
-<picture>
+<picture (click)="playTiltAndMoveShake($event)">
   <source type="image/webp" [srcset]="content()?.LOGO_IMAGE_WEBP">
   <img [id]="content()?.LOGO_IMAGE_ID" [alt]="content()?.LOGO_IMAGE_ALT"
     [title]="content()?.LOGO_IMAGE_TITLE" [src]="content()?.LOGO_IMAGE_PATH"
