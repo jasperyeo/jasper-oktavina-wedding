@@ -1,52 +1,52 @@
 <section>
   <cultural-logo-intro pAnimateOnScroll
-    enterClass="animate-enter fade-in-10 zoom-in-50 animate-duration-1000"
-    leaveClass="animate-leave fade-out-0" />
+    [enterClass]="content().enterClass"
+    [leaveClass]="content().leaveClass" />
   <character-intro pAnimateOnScroll
-    enterClass="animate-enter fade-in-10 zoom-in-50 animate-duration-1000"
-    leaveClass="animate-leave fade-out-0" />
+    [enterClass]="content().enterClass"
+    [leaveClass]="content().leaveClass" />
   @if (appService.country() === 'id') {
     <parents-info pAnimateOnScroll
-      enterClass="animate-enter fade-in-10 zoom-in-50 animate-duration-1000"
-      leaveClass="animate-leave fade-out-0" />
+      [enterClass]="content().enterClass"
+      [leaveClass]="content().leaveClass" />
   }
   <event-info pAnimateOnScroll
-    enterClass="animate-enter fade-in-10 zoom-in-50 animate-duration-1000"
-    leaveClass="animate-leave fade-out-0"/>
+    [enterClass]="content().enterClass"
+    [leaveClass]="content().leaveClass"/>
   <separator pAnimateOnScroll
-    enterClass="animate-enter fade-in-10 zoom-in-50 animate-duration-1000"
-    leaveClass="animate-leave fade-out-0" />
+    [enterClass]="content().enterClass"
+    [leaveClass]="content().leaveClass" />
   <location pAnimateOnScroll
-    enterClass="animate-enter fade-in-10 zoom-in-50 animate-duration-1000"
-    leaveClass="animate-leave fade-out-0" />
+    [enterClass]="content().enterClass"
+    [leaveClass]="content().leaveClass" />
   @if (appService.country() === 'sg') {
     <separator pAnimateOnScroll
-      enterClass="animate-enter fade-in-10 zoom-in-50 animate-duration-1000"
-      leaveClass="animate-leave fade-out-0" />
+      [enterClass]="content().enterClass"
+      [leaveClass]="content().leaveClass" />
     <getting-here pAnimateOnScroll
-      enterClass="animate-enter fade-in-10 zoom-in-50 animate-duration-1000"
-      leaveClass="animate-leave fade-out-0" />
+      [enterClass]="content().enterClass"
+      [leaveClass]="content().leaveClass" />
   }
   <separator pAnimateOnScroll
-    enterClass="animate-enter fade-in-10 zoom-in-50 animate-duration-1000"
-    leaveClass="animate-leave fade-out-0" />
+    [enterClass]="content().enterClass"
+    [leaveClass]="content().leaveClass" />
   <gallery pAnimateOnScroll
-    enterClass="animate-enter fade-in-10 zoom-in-50 animate-duration-1000"
-    leaveClass="animate-leave fade-out-0" />
+    [enterClass]="content().enterClass"
+    [leaveClass]="content().leaveClass" />
   @if (appService.country() === 'sg') {
     <separator pAnimateOnScroll
-      enterClass="animate-enter fade-in-10 zoom-in-50 animate-duration-1000"
-      leaveClass="animate-leave fade-out-0" />
+      [enterClass]="content().enterClass"
+      [leaveClass]="content().leaveClass" />
     <qna pAnimateOnScroll
-      enterClass="animate-enter fade-in-10 zoom-in-50 animate-duration-1000"
-      leaveClass="animate-leave fade-out-0" />
+      [enterClass]="content().enterClass"
+      [leaveClass]="content().leaveClass" />
   }
   <separator pAnimateOnScroll
-    enterClass="animate-enter fade-in-10 zoom-in-50 animate-duration-1000"
-    leaveClass="animate-leave fade-out-0" />
+    [enterClass]="content().enterClass"
+    [leaveClass]="content().leaveClass" />
   <countdown pAnimateOnScroll
-    enterClass="animate-enter fade-in-10 zoom-in-50 animate-duration-1000"
-    leaveClass="animate-leave fade-out-0" />
+    [enterClass]="content().enterClass"
+    [leaveClass]="content().leaveClass" />
 </section>
 <music-player />
 @if (appService.country() === 'sg') {

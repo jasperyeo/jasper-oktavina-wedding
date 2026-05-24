@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, computed, inject } from '@angular/core';
 import { AnimateOnScrollModule } from 'primeng/animateonscroll';
 import { Separator } from '../../components/separator/separator';
 import { CulturalLogoIntro } from '../../components/cultural-logo-intro/cultural-logo-intro';
@@ -13,6 +13,7 @@ import { GettingHere } from '../../components/getting-here/getting-here';
 import { AppService } from '../../app.service';
 import { Gallery } from "../../components/gallery/gallery";
 import { QnA } from '../../components/qna/qna';
+import { CONTENT_PAGE_CONTENTS } from './content-page.constants';
 
 @Component({
   standalone: true,
@@ -38,4 +39,5 @@ import { QnA } from '../../components/qna/qna';
 export class ContentPage {
 
   public readonly appService = inject(AppService);
+  public readonly content = computed(() => CONTENT_PAGE_CONTENTS);
 }
