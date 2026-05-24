@@ -1,6 +1,9 @@
+import { HASHTAG } from '../../app.constants';
+
 export const GETTING_HERE_CONTENT: any = {
   HEADING: 'q & a',
   HEADING_CN: '問答',
+  COPIED: 'Hashtag has been copied!\nHashtag 已複製！',
   QUESTIONS: [
     {
       "QUESTION": "When is the RSVP deadline?\n請問最遲何時需要回覆是否出席？",
@@ -24,7 +27,7 @@ export const GETTING_HERE_CONTENT: any = {
     },
     {
       "QUESTION": "Is there a social media hashtag?\n有婚禮專屬的社交媒體標籤嗎？",
-      "ANSWER": "Yes! Tag your photos with #LifeIsJasOkWithYou—we’d love to see your moments!\n有的！歡迎使用 #LifeIsJasOkWithYou 分享您的美好時刻，我們很期待看到！"
+      "ANSWER": `Yes! Tag your photos with ${HASHTAG}—we’d love to see your moments!\n有的！歡迎使用 ${HASHTAG} 分享您的美好時刻，我們很期待看到！`
     },
     {
       "QUESTION": "What time should I arrive?\n建議幾點到達會場？",

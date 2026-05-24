@@ -10,6 +10,15 @@
 @for (qn of content().QUESTIONS; track qn.QUESTION) {
   <p class="text-sm">
     <span class="font-bold">{{ qn.QUESTION }}</span>
-    <br>{{ qn.ANSWER }}
+    <br>
+    @for (segment of splitAnswer(qn.ANSWER); track segment) {
+      @if (segment === hashtag) {
+        <a (click)="copyHashtag()">{{ segment }}</a>
+      }
+      @if (segment !== hashtag) {
+        {{ segment }}
+      }
+    }
   </p>
 }
+<p-toast />

@@ -69,3 +69,5 @@ export const HEADER_AND_FOOTER: any = {
 }
 
 export const DEFAULT_COUNTRY: string = 'sg';
+
+export const HASHTAG: string = '#LifeIsJasOkWithYou';
