@@ -1,0 +1,24 @@
+<h1 class="text-5xl" id="getting-here">
+  {{ content()?.HEADING }}
+  @if (content()?.HEADING_CN) {
+    <span class="text-3xl">
+      <br>
+      {{ content()?.HEADING_CN }}
+    </span>
+  }
+</h1>
+@for (qn of content().QUESTIONS; track qn.QUESTION) {
+  <p class="text-sm">
+    <span class="font-bold">{{ qn.QUESTION }}</span>
+    <br>
+    @for (segment of splitAnswer(qn.ANSWER); track segment) {
+      @if (segment === hashtag) {
+        <a (click)="copyHashtag()">{{ segment }}</a>
+      }
+      @if (segment !== hashtag) {
+        {{ segment }}
+      }
+    }
+  </p>
+}
+<p-toast />

@@ -2,9 +2,9 @@
   <span class="icon pi pi-calendar"></span><span>{{ content()?.DATE }}</span><br>
   <span class="icon pi pi-map-marker"></span><span>{{ content()?.VENUE }}</span><br>
   @if (content()?.COCKTAIL) {
-    <span class="icon pi pi-clock"></span><span>{{ content()?.COCKTAIL }}</span><br>
+    <span class="icon pi pi-filter"></span><span>{{ content()?.COCKTAIL }}</span><br>
   }
-  <span class="icon pi pi-clock"></span><span>{{ content()?.TIME }}</span>
+  <span class="icon pi pi-crown"></span><span>{{ content()?.TIME }}</span>
 </p>
 <p class="text-base">
   {{ content()?.WELCOME }}
@@ -12,6 +12,6 @@
 <p-toast />
 <p-button link (click)="copyHashtag()">
   <p class="text-base">
-    <span class="icon pi pi-instagram"></span><span>#LifeIsJasOkWithYou</span><span class="icon pi pi-clone"></span><br>
+    <span class="icon pi pi-instagram"></span><span>{{ hashtag }}</span><span class="icon pi pi-clone"></span><br>
   </p>
 </p-button>

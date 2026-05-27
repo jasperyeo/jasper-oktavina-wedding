@@ -7,8 +7,8 @@ export const CULTURAL_LOGO_INTRO_CONTENT: any = {
     LOGO_IMAGE_WEBP: 'assets/images/logo-malay.webp',
     LOGO_IMAGE_WIDTH: '100',
     LOGO_IMAGE_HEIGHT: '57',
-    INTRO_TEXT_1: 'BISMILLAHIRRAHMANIRRAHIM',
-    INTRO_TEXT_2: 'Dengan penuh sukacita, kami mengundang Bapak/Ibu/Saudara/i untuk hadir di resepsi pernikahan kami.'
+    TITLE: 'bismillahirrahmanirrahim',
+    INTRO_TEXT: 'Dengan penuh sukacita, kami mengundang Bapak/Ibu/Saudara/i untuk hadir di resepsi pernikahan kami.'
   },
   sg: {
     LOGO_IMAGE_ID: 'image__logo',
@@ -18,7 +18,8 @@ export const CULTURAL_LOGO_INTRO_CONTENT: any = {
     LOGO_IMAGE_WEBP: 'assets/images/logo-chinese.webp',
     LOGO_IMAGE_WIDTH: '80',
     LOGO_IMAGE_HEIGHT: '83.16',
-    INTRO_TEXT_1: 'SAVE THE DATE\n敬請預留日期',
-    INTRO_TEXT_2: 'We warmly invite you to share our joy and celebrate our wedding.\n我們誠摯邀請您與我們分享喜悅，共同慶祝我們的婚禮。'
+    TITLE: 'save the date',
+    TITLE_CN: '敬請預留日期',
+    INTRO_TEXT: 'We warmly invite you to share our joy and celebrate our wedding.\n我們誠摯邀請您與我們分享喜悅，共同慶祝我們的婚禮。'
   }
 };
