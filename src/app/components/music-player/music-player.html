@@ -1,5 +1,5 @@
 <audio loop id="music-player">
-  <source [src]="content()?.BG_MUSIC_PATH" type="audio/mp3">
+  <source [src]="$safeNavigationMigration(content()?.BG_MUSIC_PATH)" type="audio/mp3">
 </audio>
 
 <p-button (click)="toggleMusic()" [raised]="true" rounded

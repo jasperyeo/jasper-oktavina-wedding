@@ -1,4 +1,4 @@
-import { Component, computed, inject, OnInit, signal, WritableSignal } from '@angular/core';
+import { Component, computed, inject, OnInit, signal, WritableSignal, ChangeDetectionStrategy } from '@angular/core';
 import { DOCUMENT } from '@angular/common';
 import { NavigationEnd, Router, RouterOutlet } from '@angular/router';
 import { filter } from 'rxjs';
@@ -13,6 +13,7 @@ import { DEFAULT_COUNTRY, HEADER_AND_FOOTER } from './app.constants';
     Invitation
 ],
   templateUrl: './app.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './app.scss'
 })
 export class App implements OnInit {

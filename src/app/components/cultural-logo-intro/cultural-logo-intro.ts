@@ -1,4 +1,4 @@
-import { Component, computed, inject } from '@angular/core';
+import { Component, computed, inject, ChangeDetectionStrategy } from '@angular/core';
 import { CULTURAL_LOGO_INTRO_CONTENT } from './cultural-logo-intro.constants';
 import { AppService } from '../../app.service';
 
@@ -7,6 +7,7 @@ import { AppService } from '../../app.service';
   selector: 'cultural-logo-intro',
   imports: [],
   templateUrl: './cultural-logo-intro.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './cultural-logo-intro.scss'
 })
 export class CulturalLogoIntro {

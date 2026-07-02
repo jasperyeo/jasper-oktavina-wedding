@@ -1,4 +1,4 @@
-import { Component, computed, inject } from '@angular/core';
+import { Component, computed, inject, ChangeDetectionStrategy } from '@angular/core';
 import { AnimateOnScrollModule } from 'primeng/animateonscroll';
 import { Separator } from '../../components/separator/separator';
 import { CulturalLogoIntro } from '../../components/cultural-logo-intro/cultural-logo-intro';
@@ -34,6 +34,7 @@ import { CONTENT_PAGE_CONTENTS } from './content-page.constants';
     QnA
 ],
   templateUrl: './content-page.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./content-page.scss', './stars.scss']
 })
 export class ContentPage {

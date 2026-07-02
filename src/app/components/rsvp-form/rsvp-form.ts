@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { ButtonModule } from 'primeng/button';
 
 @Component({
@@ -8,6 +8,7 @@ import { ButtonModule } from 'primeng/button';
     ButtonModule
   ],
   templateUrl: './rsvp-form.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './rsvp-form.scss'
 })
 export class RsvpForm {

@@ -1,4 +1,4 @@
-import { Component, computed, inject } from '@angular/core';
+import { Component, computed, inject, ChangeDetectionStrategy } from '@angular/core';
 import { TagModule } from 'primeng/tag';
 import { TableModule } from 'primeng/table';
 import { AppService } from '../../app.service';
@@ -18,6 +18,7 @@ import { Button } from 'primeng/button';
   ],
   providers: [ MessageService ],
   templateUrl: './qna.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './qna.scss'
 })
 export class QnA {

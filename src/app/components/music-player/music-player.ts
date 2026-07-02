@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, computed, HostListener, inject, signal, WritableSignal } from '@angular/core';
+import { AfterViewInit, Component, computed, HostListener, inject, signal, WritableSignal, ChangeDetectionStrategy } from '@angular/core';
 import { Button } from 'primeng/button';
 import { AppService } from '../../app.service';
 import { MUSIC_PLAYER_CONTENT } from './music-player.constants';
@@ -8,6 +8,7 @@ import { MUSIC_PLAYER_CONTENT } from './music-player.constants';
   selector: 'music-player',
   imports: [ Button ],
   templateUrl: './music-player.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './music-player.scss'
 })
 export class MusicPlayer implements AfterViewInit {

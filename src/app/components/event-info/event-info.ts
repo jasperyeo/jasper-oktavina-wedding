@@ -1,4 +1,4 @@
-import { Component, computed, inject } from '@angular/core';
+import { Component, computed, inject, ChangeDetectionStrategy } from '@angular/core';
 import { Button } from 'primeng/button';
 import { Toast } from 'primeng/toast';
 import { MessageService } from 'primeng/api';
@@ -12,6 +12,7 @@ import { EVENT_INFO_CONTENT } from './event-info.constants';
   imports: [ Button, Toast ],
   providers: [ MessageService ],
   templateUrl: './event-info.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './event-info.scss'
 })
 export class EventInfo {
