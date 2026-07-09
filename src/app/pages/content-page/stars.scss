@@ -1,3 +1,6 @@
+@use "sass:math";
+@use "sass:string";
+
 @keyframes star-float-1 {
   0% {
     transform: translate3d(0, 0, 0);
@@ -65,11 +68,11 @@
 }
 
 @function multiple-box-shadow($number_of_stars) {
-  $value: "#{random(3000)}px #{random(2000)}px #9F1239";
+  $value: "#{math.random(3000)}px #{math.random(2000)}px #9F1239";
   @for $i from 2 through $number_of_stars {
-    $value: "#{$value}, #{random(3000)}px #{random(2000)}px #9F1239";
+    $value: "#{$value}, #{math.random(3000)}px #{math.random(2000)}px #9F1239";
   }
-  @return unquote($value);
+  @return string.unquote($value);
 }
 
 $shadows-small: multiple-box-shadow(280);
@@ -103,7 +106,7 @@ $shadows-big: multiple-box-shadow(40);
   #stars1 {
     box-shadow: $shadows-small;
     animation: star-float-1 50s linear infinite, 1s star-blink 3s linear infinite;
-    animation-delay: 0s, #{random(3)}s;
+    animation-delay: 0s, #{math.random(3)}s;
     &::after {
       box-shadow: $shadows-small;
     }
@@ -114,7 +117,7 @@ $shadows-big: multiple-box-shadow(40);
     height: 2px;
     box-shadow: $shadows-medium;
     animation: star-float-2 100s linear infinite, 1s star-blink 2s linear infinite;
-    animation-delay: 0s, #{random(2)}s;
+    animation-delay: 0s, #{math.random(2)}s;
     &::after {
       width: 2px;
       height: 2px;
@@ -127,7 +130,7 @@ $shadows-big: multiple-box-shadow(40);
     height: 3px;
     box-shadow: $shadows-big;
     animation: star-float-3 150s linear infinite, 1s star-blink 1.5s linear infinite;
-    animation-delay: 0s, #{random(2)}s;
+    animation-delay: 0s, #{math.random(2)}s;
     &::after {
       width: 3px;
       height: 3px;

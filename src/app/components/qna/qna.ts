@@ -6,14 +6,12 @@ import { HASHTAG } from '../../app.constants';
 import { GETTING_HERE_CONTENT } from './qna.constants';
 import { MessageService } from 'primeng/api';
 import { Toast } from 'primeng/toast';
-import { Button } from 'primeng/button';
 
 @Component({
   selector: 'qna',
   imports: [
     TagModule,
     TableModule,
-    Button,
     Toast
   ],
   providers: [ MessageService ],
