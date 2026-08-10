@@ -7,7 +7,7 @@ export const GETTING_HERE_CONTENT: any = {
   QUESTIONS: [
     {
       "QUESTION": "When is the RSVP deadline?\n請問最遲何時需要回覆是否出席？",
-      "ANSWER": "Kindly RSVP by 9th August 2026 so we can make the necessary arrangements for your seating and dining.\n請您於2026年8月9日前回覆出席情況，以便我們妥善安排座位與餐飲。"
+      "ANSWER": "Kindly RSVP by 31st October 2026 so we can make the necessary arrangements for your seating and dining.\n請您於2026年10月31日前回覆出席情況，以便我們妥善安排座位與餐飲。"
     },
     {
       "QUESTION": "What should I wear?\n婚禮當天應如何著裝？",
