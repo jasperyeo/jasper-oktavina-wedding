@@ -1,6 +1,7 @@
 import { Component, computed, inject, ChangeDetectionStrategy } from '@angular/core';
 import { AnimateOnScrollModule } from 'primeng/animateonscroll';
 import { Separator } from '../../components/separator/separator';
+import { NavMenu } from '../../components/nav-menu/nav-menu';
 import { CulturalLogoIntro } from '../../components/cultural-logo-intro/cultural-logo-intro';
 import { CharacterIntro } from '../../components/character-intro/character-intro';
 import { ParentsInfo } from '../../components/parents-info/parents-info';
@@ -21,6 +22,7 @@ import { CONTENT_PAGE_CONTENTS } from './content-page.constants';
   imports: [
     AnimateOnScrollModule,
     Separator,
+    NavMenu,
     CulturalLogoIntro,
     CharacterIntro,
     ParentsInfo,
