@@ -1,4 +1,4 @@
-import { Component, computed, HostBinding, input, InputSignal, output, OutputEmitterRef } from '@angular/core';
+import { Component, computed, HostBinding, input, InputSignal, output, OutputEmitterRef, ChangeDetectionStrategy } from '@angular/core';
 import { Button } from 'primeng/button';
 import { INVITATION_CONTENT } from './invitation.constants';
 import { CHARACTER_INTRO_CONTENT } from '../character-intro/character-intro.constants';
@@ -9,6 +9,7 @@ import { HEADER_AND_FOOTER } from '../../app.constants';
   selector: 'invitation',
   imports: [ Button ],
   templateUrl: './invitation.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './invitation.scss'
 })
 export class Invitation {

@@ -1,4 +1,4 @@
-import { Component, computed, inject } from '@angular/core';
+import { Component, computed, inject, ChangeDetectionStrategy } from '@angular/core';
 import { TagModule } from 'primeng/tag';
 import { TableModule } from 'primeng/table';
 import { AppService } from '../../app.service';
@@ -6,18 +6,17 @@ import { HASHTAG } from '../../app.constants';
 import { GETTING_HERE_CONTENT } from './qna.constants';
 import { MessageService } from 'primeng/api';
 import { Toast } from 'primeng/toast';
-import { Button } from 'primeng/button';
 
 @Component({
   selector: 'qna',
   imports: [
     TagModule,
     TableModule,
-    Button,
     Toast
   ],
   providers: [ MessageService ],
   templateUrl: './qna.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './qna.scss'
 })
 export class QnA {

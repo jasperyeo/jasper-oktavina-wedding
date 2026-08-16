@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, computed, inject, signal, WritableSignal } from '@angular/core';
+import { AfterViewInit, Component, computed, inject, signal, WritableSignal, ChangeDetectionStrategy } from '@angular/core';
 import { AppService } from '../../app.service';
 import { LOCATION_CONTENT } from './location.constants';
 
@@ -7,6 +7,7 @@ import { LOCATION_CONTENT } from './location.constants';
   selector: 'location',
   imports: [],
   templateUrl: './location.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './location.scss'
 })
 export class Location implements AfterViewInit {

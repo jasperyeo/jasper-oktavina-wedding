@@ -1,4 +1,4 @@
-import { Component, computed, inject } from '@angular/core';
+import { Component, computed, inject, ChangeDetectionStrategy } from '@angular/core';
 import { AppService } from '../../app.service';
 import { CHARACTER_INTRO_CONTENT } from './character-intro.constants';
 
@@ -7,6 +7,7 @@ import { CHARACTER_INTRO_CONTENT } from './character-intro.constants';
   selector: 'character-intro',
   imports: [],
   templateUrl: './character-intro.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './character-intro.scss'
 })
 export class CharacterIntro {

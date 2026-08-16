@@ -1,8 +1,8 @@
 <picture (click)="playTiltAndMoveShake($event)">
-  <source type="image/webp" [srcset]="content()?.LOGO_IMAGE_WEBP">
-  <img [id]="content()?.LOGO_IMAGE_ID" [alt]="content()?.LOGO_IMAGE_ALT"
-    [title]="content()?.LOGO_IMAGE_TITLE" [src]="content()?.LOGO_IMAGE_PATH"
-    [width]="content()?.LOGO_IMAGE_WIDTH" [height]="content()?.LOGO_IMAGE_HEIGHT"
+  <source type="image/webp" [srcset]="$safeNavigationMigration(content()?.LOGO_IMAGE_WEBP)">
+  <img [id]="$safeNavigationMigration(content()?.LOGO_IMAGE_ID)" [alt]="$safeNavigationMigration(content()?.LOGO_IMAGE_ALT)"
+    [title]="$safeNavigationMigration(content()?.LOGO_IMAGE_TITLE)" [src]="$safeNavigationMigration(content()?.LOGO_IMAGE_PATH)"
+    [width]="$safeNavigationMigration(content()?.LOGO_IMAGE_WIDTH)" [height]="$safeNavigationMigration(content()?.LOGO_IMAGE_HEIGHT)"
     [class.small]="appService.country() === 'sg'" />
 </picture>
 <h1 class="text-5xl" id="cultural-logo-intro">

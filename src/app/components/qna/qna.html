@@ -11,7 +11,7 @@
   <p class="text-sm">
     <span class="font-bold">{{ qn.QUESTION }}</span>
     <br>
-    @for (segment of splitAnswer(qn.ANSWER); track segment) {
+    @for (segment of splitAnswer(qn.ANSWER); ; let idx = $index; track segment + '_' + idx) {
       @if (segment === hashtag) {
         <a (click)="copyHashtag()">{{ segment }}</a>
       }

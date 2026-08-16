@@ -1,8 +1,8 @@
 <div id="invitation__container">
   <picture>
-    <source type="image/webp" [srcset]="content()?.HEADER?.WEBP">
-    <img [id]="content()?.HEADER?.ID" [alt]="content()?.HEADER?.ALT"
-      [title]="content()?.HEADER?.TITLE" [src]="content()?.HEADER?.PATH"
+    <source type="image/webp" [srcset]="$safeNavigationMigration(content()?.HEADER?.WEBP)">
+    <img [id]="$safeNavigationMigration(content()?.HEADER?.ID)" [alt]="$safeNavigationMigration(content()?.HEADER?.ALT)"
+      [title]="$safeNavigationMigration(content()?.HEADER?.TITLE)" [src]="$safeNavigationMigration(content()?.HEADER?.PATH)"
       fetchpriority="high" loading="eager" />
   </picture>
   <div id="invitation__content" [class]="country()">
@@ -11,9 +11,9 @@
     </p>
     @if (content()?.COUPLE_NAME_WEBP) {
       <picture>
-        <source type="image/webp" [srcset]="content()?.COUPLE_NAME_WEBP">
-        <img [id]="content()?.COUPLE_NAME_ID" [alt]="content()?.COUPLE_NAME_ALT"
-          [title]="content()?.COUPLE_NAME_TITLE" [src]="content()?.COUPLE_NAME_PATH"
+        <source type="image/webp" [srcset]="$safeNavigationMigration(content()?.COUPLE_NAME_WEBP)">
+        <img [id]="$safeNavigationMigration(content()?.COUPLE_NAME_ID)" [alt]="$safeNavigationMigration(content()?.COUPLE_NAME_ALT)"
+          [title]="$safeNavigationMigration(content()?.COUPLE_NAME_TITLE)" [src]="$safeNavigationMigration(content()?.COUPLE_NAME_PATH)"
           fetchpriority="high" loading="eager" />
       </picture>
     } @else {
@@ -38,9 +38,9 @@
     </p-button>
   </div>
   <picture>
-    <source type="image/webp" [srcset]="content()?.FOOTER?.WEBP">
-    <img [id]="content()?.FOOTER?.ID" [alt]="content()?.FOOTER?.ALT"
-      [title]="content()?.FOOTER?.TITLE" [src]="content()?.FOOTER?.PATH"
+    <source type="image/webp" [srcset]="$safeNavigationMigration(content()?.FOOTER?.WEBP)">
+    <img [id]="$safeNavigationMigration(content()?.FOOTER?.ID)" [alt]="$safeNavigationMigration(content()?.FOOTER?.ALT)"
+      [title]="$safeNavigationMigration(content()?.FOOTER?.TITLE)" [src]="$safeNavigationMigration(content()?.FOOTER?.PATH)"
       fetchpriority="high" loading="eager" />
   </picture>
 </div>

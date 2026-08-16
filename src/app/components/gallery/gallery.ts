@@ -1,4 +1,4 @@
-import { Component, computed, inject, model, ModelSignal, OnInit, signal, WritableSignal } from '@angular/core';
+import { Component, computed, inject, model, ModelSignal, OnInit, signal, WritableSignal, ChangeDetectionStrategy } from '@angular/core';
 import { GalleriaModule } from 'primeng/galleria';
 import { ImageModule } from 'primeng/image';
 import { AppService } from '../../app.service';
@@ -12,6 +12,7 @@ import { GALLERY_CONTENT, RESPONSIVE_OPTIONS, AUTOPLAY, CIRCULAR, NUMVISIBLE } f
     ImageModule
   ],
   templateUrl: './gallery.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './gallery.scss'
 })
 export class Gallery implements OnInit {

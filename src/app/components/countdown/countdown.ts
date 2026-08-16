@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, computed, inject, Signal, signal, WritableSignal } from '@angular/core';
+import { AfterViewInit, Component, computed, inject, Signal, signal, WritableSignal, ChangeDetectionStrategy } from '@angular/core';
 import { Button } from 'primeng/button';
 import { createEvent } from 'ics';
 import { AppService } from '../../app.service';
@@ -9,6 +9,7 @@ import { COUNTDOWN_CONTENT } from './countdown.constants';
   selector: 'countdown',
   imports: [ Button ],
   templateUrl: './countdown.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './countdown.scss'
 })
 export class Countdown implements AfterViewInit {
