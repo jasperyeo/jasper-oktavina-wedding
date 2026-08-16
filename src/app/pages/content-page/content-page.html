@@ -14,35 +14,40 @@
   <event-info pAnimateOnScroll
     [enterClass]="content().enterClass"
     [leaveClass]="content().leaveClass"/>
-  <separator pAnimateOnScroll
+  <separator id="separator-location"
+    pAnimateOnScroll
     [enterClass]="content().enterClass"
     [leaveClass]="content().leaveClass" />
   <location pAnimateOnScroll
     [enterClass]="content().enterClass"
     [leaveClass]="content().leaveClass" />
   @if (appService.country() === 'sg') {
-    <separator pAnimateOnScroll
+    <separator id="separator-getting-here"
+      pAnimateOnScroll
       [enterClass]="content().enterClass"
       [leaveClass]="content().leaveClass" />
     <getting-here pAnimateOnScroll
       [enterClass]="content().enterClass"
       [leaveClass]="content().leaveClass" />
   }
-  <separator pAnimateOnScroll
+  <separator id="separator-gallery"
+    pAnimateOnScroll
     [enterClass]="content().enterClass"
     [leaveClass]="content().leaveClass" />
   <gallery pAnimateOnScroll
     [enterClass]="content().enterClass"
     [leaveClass]="content().leaveClass" />
   @if (appService.country() === 'sg') {
-    <separator pAnimateOnScroll
+    <separator id="separator-qna"
+      pAnimateOnScroll
       [enterClass]="content().enterClass"
       [leaveClass]="content().leaveClass" />
     <qna pAnimateOnScroll
       [enterClass]="content().enterClass"
       [leaveClass]="content().leaveClass" />
   }
-  <separator pAnimateOnScroll
+  <separator id="separator-countdown"
+    pAnimateOnScroll
     [enterClass]="content().enterClass"
     [leaveClass]="content().leaveClass" />
   <countdown pAnimateOnScroll

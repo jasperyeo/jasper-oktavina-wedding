@@ -1,22 +1,31 @@
-p-button {
-  z-index: 1;
-  position: fixed;
-  width: 42px;
-  height: 42px;
-  bottom: 16px;
-  right: 16px;
-  border-radius: 50%;
-}
+p-menubar {
+  display: none;
 
-.pulse {
-  animation: pulse-animation 2s infinite;
-}
-
-@keyframes pulse-animation {
-  0% {
-    box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.2);
+  @media (min-width: 769px) {
+    display: block;
+    width: max-content;
+    z-index: 2;
+    position: fixed;
+    top: 16px;
+    left: 50%;
+    transform: translateX(-50%);
   }
-  100% {
-    box-shadow: 0 0 0 20px rgba(0, 0, 0, 0);
+}
+
+#mobile-menu {
+  display: block;
+  
+
+  p-button {
+    z-index: 2;
+    position: fixed;
+    top: 16px;
+    left: 16px;
+    width: 42px;
+    height: 42px;
+  }
+
+  @media (min-width: 769px) {
+    display: none;
   }
 }
