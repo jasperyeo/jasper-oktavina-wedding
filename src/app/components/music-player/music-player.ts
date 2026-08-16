@@ -20,6 +20,8 @@ export class MusicPlayer implements AfterViewInit {
 
   public ngAfterViewInit(): void {
     this.musicPlayer.set(document.getElementById('music-player') as HTMLAudioElement);
+    this.musicPlayer()?.play();
+    this.isPlaying.set(true);
   }
 
   public toggleMusic(): void {
