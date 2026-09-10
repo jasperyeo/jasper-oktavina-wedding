@@ -53,6 +53,6 @@
     "karma-jasmine-html-reporter": "~2.1.0",
     "postcss": "^8.5.26",
     "typescript": "~6.0.3",
-    "vitest": "^4.0.8"
+    "vitest": "^4.1.11"
   }
 }
