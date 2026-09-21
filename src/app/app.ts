@@ -13,7 +13,7 @@ import { DEFAULT_COUNTRY, HEADER_AND_FOOTER } from './app.constants';
     Invitation
 ],
   templateUrl: './app.html',
-  changeDetection: ChangeDetectionStrategy.Eager,
+  changeDetection: ChangeDetectionStrategy.OnPush,
   styleUrl: './app.scss'
 })
 export class App implements OnInit {

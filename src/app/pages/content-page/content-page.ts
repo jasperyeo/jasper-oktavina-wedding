@@ -36,7 +36,7 @@ import { CONTENT_PAGE_CONTENTS } from './content-page.constants';
     QnA
 ],
   templateUrl: './content-page.html',
-  changeDetection: ChangeDetectionStrategy.Eager,
+  changeDetection: ChangeDetectionStrategy.OnPush,
   styleUrls: ['./content-page.scss', './stars.scss']
 })
 export class ContentPage {

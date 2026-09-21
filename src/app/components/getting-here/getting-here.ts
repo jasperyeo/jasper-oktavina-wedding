@@ -11,7 +11,7 @@ import { GETTING_HERE_CONTENT } from './getting-here.constants';
     TableModule
   ],
   templateUrl: './getting-here.html',
-  changeDetection: ChangeDetectionStrategy.Eager,
+  changeDetection: ChangeDetectionStrategy.OnPush,
   styleUrl: './getting-here.scss'
 })
 export class GettingHere {

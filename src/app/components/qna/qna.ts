@@ -16,7 +16,7 @@ import { Toast } from 'primeng/toast';
   ],
   providers: [ MessageService ],
   templateUrl: './qna.html',
-  changeDetection: ChangeDetectionStrategy.Eager,
+  changeDetection: ChangeDetectionStrategy.OnPush,
   styleUrl: './qna.scss'
 })
 export class QnA {

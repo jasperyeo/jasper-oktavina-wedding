@@ -14,7 +14,7 @@ import { HEADER_AND_FOOTER } from '../../app.constants';
     Button
   ],
   templateUrl: './invitation.html',
-  changeDetection: ChangeDetectionStrategy.Eager,
+  changeDetection: ChangeDetectionStrategy.OnPush,
   styleUrl: './invitation.scss'
 })
 export class Invitation {

@@ -12,7 +12,7 @@ import { EVENT_INFO_CONTENT } from './event-info.constants';
   imports: [ Button, Toast ],
   providers: [ MessageService ],
   templateUrl: './event-info.html',
-  changeDetection: ChangeDetectionStrategy.Eager,
+  changeDetection: ChangeDetectionStrategy.OnPush,
   styleUrl: './event-info.scss'
 })
 export class EventInfo {

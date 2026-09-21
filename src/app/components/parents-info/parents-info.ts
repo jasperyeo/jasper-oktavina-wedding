@@ -5,7 +5,7 @@ import { Component, ChangeDetectionStrategy } from '@angular/core';
   selector: 'parents-info',
   imports: [],
   templateUrl: './parents-info.html',
-  changeDetection: ChangeDetectionStrategy.Eager,
+  changeDetection: ChangeDetectionStrategy.OnPush,
   styleUrl: './parents-info.scss'
 })
 export class ParentsInfo {

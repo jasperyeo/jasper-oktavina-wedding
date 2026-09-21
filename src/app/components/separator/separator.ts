@@ -7,7 +7,7 @@ import { AppService } from '../../app.service';
   selector: 'separator',
   imports: [],
   templateUrl: './separator.html',
-  changeDetection: ChangeDetectionStrategy.Eager,
+  changeDetection: ChangeDetectionStrategy.OnPush,
   styleUrl: './separator.scss'
 })
 export class Separator {

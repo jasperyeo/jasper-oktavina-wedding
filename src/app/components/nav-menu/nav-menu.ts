@@ -17,7 +17,7 @@ import { NAV_MENU_CONTENT } from './nav-menu.constants';
     ButtonLabel
 ],
   templateUrl: './nav-menu.html',
-  changeDetection: ChangeDetectionStrategy.Eager,
+  changeDetection: ChangeDetectionStrategy.OnPush,
   styleUrl: './nav-menu.scss'
 })
 export class NavMenu {
