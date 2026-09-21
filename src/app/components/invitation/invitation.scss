@@ -1,7 +1,7 @@
 :host {
-  display: block;
+  // display: block;
   width: 100vw;
-  height: 100dvh;
+  height: 100vh;
   position: fixed;
   z-index: 2;
   background-repeat: repeat;
@@ -137,7 +137,7 @@ img {
     padding: 0px 16px;
     max-width: 1000px;
     margin: 0px auto;
-    height: 100dvh;
+    height: 100vh;
     overflow: hidden;
   }
 
