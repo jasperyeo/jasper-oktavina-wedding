@@ -79,6 +79,45 @@ p {
     opacity: 1;
     animation: none;
   }
+
+  .invitation-bloom {
+    animation: none;
+    transform: scale(1);
+  }
+}
+
+.invitation-bloom {
+  animation: invitation-bloom 900ms ease-out both;
+
+  &--header {
+    transform-origin: top center;
+  }
+
+  &--footer {
+    transform-origin: bottom center;
+  }
+}
+
+@keyframes invitation-bloom {
+  0% {
+    transform: scale(0);
+  }
+
+  65% {
+    transform: scale(1.08);
+  }
+
+  80% {
+    transform: scale(0.96);
+  }
+
+  92% {
+    transform: scale(1.03);
+  }
+
+  100% {
+    transform: scale(1);
+  }
 }
 
 img {
