@@ -7,7 +7,7 @@ import { LOCATION_CONTENT } from './location.constants';
   selector: 'location',
   imports: [],
   templateUrl: './location.html',
-  changeDetection: ChangeDetectionStrategy.Eager,
+  changeDetection: ChangeDetectionStrategy.OnPush,
   styleUrl: './location.scss'
 })
 export class Location implements AfterViewInit {

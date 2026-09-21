@@ -1,11 +1,29 @@
 p-button {
+  display: block;
   z-index: 1;
   position: fixed;
   width: 42px;
+  min-width: 42px;
+  max-width: 42px;
   height: 42px;
+  min-height: 42px;
+  max-height: 42px;
   bottom: 16px;
   right: 16px;
   border-radius: 50%;
+  box-sizing: border-box;
+}
+
+:host ::ng-deep p-button > button {
+  width: 42px;
+  min-width: 42px;
+  max-width: 42px;
+  height: 42px;
+  min-height: 42px;
+  max-height: 42px;
+  padding: 0;
+  border-radius: 50%;
+  box-sizing: border-box;
 }
 
 .pulse {

@@ -7,7 +7,7 @@ import { AppService } from '../../app.service';
   selector: 'cultural-logo-intro',
   imports: [],
   templateUrl: './cultural-logo-intro.html',
-  changeDetection: ChangeDetectionStrategy.Eager,
+  changeDetection: ChangeDetectionStrategy.OnPush,
   styleUrl: './cultural-logo-intro.scss'
 })
 export class CulturalLogoIntro {

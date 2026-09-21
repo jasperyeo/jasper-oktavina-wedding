@@ -1,31 +1,31 @@
 <div id="invitation__container">
-  <picture>
+  <picture class="invitation-bloom invitation-bloom--header">
     <source type="image/webp" [srcset]="$safeNavigationMigration(content()?.HEADER?.WEBP)">
     <img [id]="$safeNavigationMigration(content()?.HEADER?.ID)" [alt]="$safeNavigationMigration(content()?.HEADER?.ALT)"
       [title]="$safeNavigationMigration(content()?.HEADER?.TITLE)" [src]="$safeNavigationMigration(content()?.HEADER?.PATH)"
       fetchpriority="high" loading="eager" />
   </picture>
   <div id="invitation__content" [class]="country()">
-    <p class="text-lg">
+    <p class="text-lg invitation-sequence invitation-sequence--pre-name">
       {{ content()?.PRE_NAME }}
     </p>
     @if (content()?.COUPLE_NAME_WEBP) {
-      <picture>
+      <picture class="invitation-sequence invitation-sequence--couple-name">
         <source type="image/webp" [srcset]="$safeNavigationMigration(content()?.COUPLE_NAME_WEBP)">
         <img [id]="$safeNavigationMigration(content()?.COUPLE_NAME_ID)" [alt]="$safeNavigationMigration(content()?.COUPLE_NAME_ALT)"
           [title]="$safeNavigationMigration(content()?.COUPLE_NAME_TITLE)" [src]="$safeNavigationMigration(content()?.COUPLE_NAME_PATH)"
           fetchpriority="high" loading="eager" />
       </picture>
     } @else {
-      <div id="invitation__name-placeholder"></div>
+      <div id="invitation__name-placeholder" class="invitation-sequence invitation-sequence--couple-name"></div>
     }
-    <p class="text-base">
+    <p class="text-base invitation-sequence invitation-sequence--post-name-1">
       {{ content()?.POST_NAME_1 }}
     </p>
-    <p class="text-lg">
+    <p class="text-lg invitation-sequence invitation-sequence--post-name-2">
       {{ content()?.POST_NAME_2 }}
     </p>
-    <p-button (click)="openInvitation()">
+    <p-button class="invitation-sequence invitation-sequence--button" (click)="openInvitation()">
       <span pButtonLabel>
         <span class="icon">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="16px" height="16px" fill="white" aria-hidden="true" focusable="false">
@@ -37,7 +37,7 @@
       </span>
     </p-button>
   </div>
-  <picture>
+  <picture class="invitation-bloom invitation-bloom--footer">
     <source type="image/webp" [srcset]="$safeNavigationMigration(content()?.FOOTER?.WEBP)">
     <img [id]="$safeNavigationMigration(content()?.FOOTER?.ID)" [alt]="$safeNavigationMigration(content()?.FOOTER?.ALT)"
       [title]="$safeNavigationMigration(content()?.FOOTER?.TITLE)" [src]="$safeNavigationMigration(content()?.FOOTER?.PATH)"

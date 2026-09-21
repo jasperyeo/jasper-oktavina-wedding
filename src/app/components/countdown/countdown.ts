@@ -9,7 +9,7 @@ import { COUNTDOWN_CONTENT } from './countdown.constants';
   selector: 'countdown',
   imports: [ Button ],
   templateUrl: './countdown.html',
-  changeDetection: ChangeDetectionStrategy.Eager,
+  changeDetection: ChangeDetectionStrategy.OnPush,
   styleUrl: './countdown.scss'
 })
 export class Countdown implements AfterViewInit {

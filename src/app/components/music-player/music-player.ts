@@ -8,7 +8,7 @@ import { MUSIC_PLAYER_CONTENT } from './music-player.constants';
   selector: 'music-player',
   imports: [ Button ],
   templateUrl: './music-player.html',
-  changeDetection: ChangeDetectionStrategy.Eager,
+  changeDetection: ChangeDetectionStrategy.OnPush,
   styleUrl: './music-player.scss'
 })
 export class MusicPlayer implements AfterViewInit {

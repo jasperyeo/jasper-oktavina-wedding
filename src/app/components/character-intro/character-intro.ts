@@ -7,7 +7,7 @@ import { CHARACTER_INTRO_CONTENT } from './character-intro.constants';
   selector: 'character-intro',
   imports: [],
   templateUrl: './character-intro.html',
-  changeDetection: ChangeDetectionStrategy.Eager,
+  changeDetection: ChangeDetectionStrategy.OnPush,
   styleUrl: './character-intro.scss'
 })
 export class CharacterIntro {

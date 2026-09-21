@@ -8,7 +8,7 @@ import { ButtonModule } from 'primeng/button';
     ButtonModule
   ],
   templateUrl: './rsvp-form.html',
-  changeDetection: ChangeDetectionStrategy.Eager,
+  changeDetection: ChangeDetectionStrategy.OnPush,
   styleUrl: './rsvp-form.scss'
 })
 export class RsvpForm {

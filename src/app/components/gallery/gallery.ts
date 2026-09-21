@@ -12,7 +12,7 @@ import { GALLERY_CONTENT, RESPONSIVE_OPTIONS, AUTOPLAY, CIRCULAR, NUMVISIBLE } f
     ImageModule
   ],
   templateUrl: './gallery.html',
-  changeDetection: ChangeDetectionStrategy.Eager,
+  changeDetection: ChangeDetectionStrategy.OnPush,
   styleUrl: './gallery.scss'
 })
 export class Gallery implements OnInit {
