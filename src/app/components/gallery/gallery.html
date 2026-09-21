@@ -8,7 +8,7 @@
   }
 </h1>
 <p-galleria [value]="images()" [autoPlay]="AUTOPLAY" [circular]="CIRCULAR" [responsiveOptions]="responsiveOptions()" [numVisible]="NUMVISIBLE"
-  [containerStyle]="{'width': '80%', 'margin': 'auto'}" [showItemNavigators]="true" [showItemNavigatorsOnHover]="true">
+  [containerStyle]="{'width': '100%', 'border': '3px solid #ac8c7b'}" [showItemNavigators]="true" [showItemNavigatorsOnHover]="true">
   <ng-template #item let-item>
     <p-image [src]="'assets/images/' + item.itemImageSrc" class="gallery__item" [preview]="true" [alt]="item.alt" [title]="item.title" />
   </ng-template>
