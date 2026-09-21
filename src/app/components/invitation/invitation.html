@@ -6,26 +6,26 @@
       fetchpriority="high" loading="eager" />
   </picture>
   <div id="invitation__content" [class]="country()">
-    <p class="text-lg">
+    <p class="text-lg invitation-sequence invitation-sequence--pre-name">
       {{ content()?.PRE_NAME }}
     </p>
     @if (content()?.COUPLE_NAME_WEBP) {
-      <picture>
+      <picture class="invitation-sequence invitation-sequence--couple-name">
         <source type="image/webp" [srcset]="$safeNavigationMigration(content()?.COUPLE_NAME_WEBP)">
         <img [id]="$safeNavigationMigration(content()?.COUPLE_NAME_ID)" [alt]="$safeNavigationMigration(content()?.COUPLE_NAME_ALT)"
           [title]="$safeNavigationMigration(content()?.COUPLE_NAME_TITLE)" [src]="$safeNavigationMigration(content()?.COUPLE_NAME_PATH)"
           fetchpriority="high" loading="eager" />
       </picture>
     } @else {
-      <div id="invitation__name-placeholder"></div>
+      <div id="invitation__name-placeholder" class="invitation-sequence invitation-sequence--couple-name"></div>
     }
-    <p class="text-base">
+    <p class="text-base invitation-sequence invitation-sequence--post-name-1">
       {{ content()?.POST_NAME_1 }}
     </p>
-    <p class="text-lg">
+    <p class="text-lg invitation-sequence invitation-sequence--post-name-2">
       {{ content()?.POST_NAME_2 }}
     </p>
-    <p-button (click)="openInvitation()">
+    <p-button class="invitation-sequence invitation-sequence--button" (click)="openInvitation()">
       <span pButtonLabel>
         <span class="icon">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="16px" height="16px" fill="white" aria-hidden="true" focusable="false">
