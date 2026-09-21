@@ -1,4 +1,7 @@
 main {
+  min-height: 100dvh;
+  box-sizing: border-box;
+  padding-block: env(safe-area-inset-top) env(safe-area-inset-bottom);
   background-repeat: repeat;
 
   &.id {
