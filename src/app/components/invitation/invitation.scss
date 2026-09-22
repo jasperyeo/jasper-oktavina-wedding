@@ -1,17 +1,18 @@
 :host {
-  // display: block;
+  display: block;
   width: 100vw;
-  height: 100vh;
+  height: 100dvh;
   position: fixed;
+  top: 0px;
   z-index: 2;
   background-repeat: repeat;
 
-  &.opened {
-    transition: all 2s, opacity .5s;
-    height: 0px;
-    top: -100%;
-    opacity: .2;
-  }
+  // &.opened {
+  //   transition: all .7s;
+  //   height: 0px;
+  //   top: -100%;
+  //   opacity: .2;
+  // }
 
   &.id {
     background-image: image-set(
@@ -25,6 +26,43 @@
       url('/jasper-oktavina-wedding/assets/images/background-tile-sg.webp') type('image/webp'),
       url('/jasper-oktavina-wedding/assets/images/background-tile-sg.png') type('image/png')
     );
+  }
+}
+
+:host.invitation-leave {
+  animation: invitation-leave 900ms ease-in-out forwards;
+  pointer-events: none;
+}
+
+@keyframes invitation-leave {
+  from {
+    opacity: 1;
+    clip-path: polygon(
+      50% 50%, 50% 50%, 50% 50%, 50% 50%, 50% 50%, 50% 50%,
+      50% 50%, 50% 50%, 50% 50%, 50% 50%, 50% 50%, 50% 50%,
+      50% 50%, 50% 50%
+    );
+    transform: scale(1);
+  }
+
+  60% {
+    clip-path: polygon(
+      50% 100%,
+      35% 86%, 20% 70%, 12% 52%, 14% 35%, 25% 25%,
+      38% 25%, 50% 38%, 62% 25%, 75% 25%, 86% 35%,
+      88% 52%, 80% 70%, 65% 86%
+    );
+    transform: scale(1);
+  }
+
+  to {
+    opacity: 0;
+    clip-path: polygon(
+      50% 50%, 50% 50%, 50% 50%, 50% 50%, 50% 50%, 50% 50%,
+      50% 50%, 50% 50%, 50% 50%, 50% 50%, 50% 50%, 50% 50%,
+      50% 50%, 50% 50%
+    );
+    transform: scale(1.15);
   }
 }
 
@@ -137,7 +175,7 @@ img {
     padding: 0px 16px;
     max-width: 1000px;
     margin: 0px auto;
-    height: 100vh;
+    height: 100dvh;
     overflow: hidden;
   }
 

@@ -1,6 +1,6 @@
 <main [class]="country()">
-  @if (country().length > 0) {
-    <invitation [country]="country()" (onOpen)="open()" />
+  @if (country().length > 0 && !opened()) {
+    <invitation [country]="country()" (onOpen)="open()" animate.leave="invitation-leave" />
   }
   @defer {
     @if (opened()) {

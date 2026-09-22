@@ -29,7 +29,7 @@ export class Invitation {
     }
   });
   public onOpen: OutputEmitterRef<void> = output<void>();
-  @HostBinding('class.opened') public opened: boolean = false;
+  // @HostBinding('class.opened') public opened: boolean = false;
   @HostBinding('class.id') classId: boolean = this.country() === 'id';
   @HostBinding('class.sg') classSg: boolean = this.country() === 'sg';
 
@@ -40,7 +40,7 @@ export class Invitation {
   public openInvitation(): void {
     document.body.style.overflow = 'unset';
     this.onOpen.emit();
-    this.opened = true;
+    // this.opened = true;
     const audio: HTMLAudioElement | null = document.querySelector("audio");
     if (audio) {
       audio.volume = 0.2;
