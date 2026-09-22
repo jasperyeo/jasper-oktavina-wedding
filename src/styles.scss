@@ -14,8 +14,17 @@
   font-display: swap;
 }
 
+* {
+  scrollbar-width: none;
+}
+
 html, body {
   overscroll-behavior: none;
   scroll-behavior: smooth;
   background-color: #fff4ef;
+}
+
+img {
+  -webkit-touch-callout: none;
+  -webkit-user-drag: none;
 }
