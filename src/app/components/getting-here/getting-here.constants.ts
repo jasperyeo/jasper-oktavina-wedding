@@ -11,8 +11,20 @@ export const GETTING_HERE_CONTENT: any = {
   TRAIN: {
     TITLE: 'By train / 地鐵',
     ICON: null,
-    INSTRUCTION: '- Travel to Farrer Park MRT Station (NE8) on the NE Line\n- Exit via Exit A\n- Estimated 3 mins walk\n- 搭乘東北線至花拉公園地鐵站 (NE8)\n- 從 A 出口出站\n- 步行約 3 分鐘',
-    GMAP_URL: 'https://maps.app.goo.gl/duLWesta2knALxms9',
-    GMAP_ADDRESS: '250 Race Course Rd, B1-02, Singapore 218703'
-  }
+    INSTRUCTION: '- Travel to Farrer Park MRT Station (NE8) on the NE Line\n- Exit via Exit A\n- Estimated 3 mins walk\n- 搭乘東北線至花拉公園地鐵站 (NE8)\n- 從 A 出口出站\n- 步行約 3 分鐘'
+  },
+  DIRECTIONS: [
+    { 
+      INSTRUCTION: 'Google Maps ↗',
+      URL: 'https://www.google.com/maps/search/?api=1&query=One+Farrer+Hotel%2C+1+Farrer+Park+Station+Road%2C+Singapore+217562'
+    },
+    {
+      INSTRUCTION: 'Apple Maps ↗',
+      URL: 'https://maps.apple.com/?q=One+Farrer+Hotel&address=1+Farrer+Park+Station+Road%2C+Singapore+217562'
+    },
+    {
+      INSTRUCTION: 'Waze ↗',
+      URL: 'https://waze.com/ul?q=One+Farrer+Hotel%2C+1+Farrer+Park+Station+Road%2C+Singapore+217562&navigate=yes'
+    }
+  ]
 };
