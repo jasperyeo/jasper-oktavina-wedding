@@ -29,10 +29,14 @@
     <span>{{ content()?.TRAIN.TITLE }}</span><br>
   </p>
   <p class="text-sm">
-    <span class="icon pi pi-map-marker"></span>
-    <a href="{{ content()?.TRAIN.GMAP_URL }}" target="_blank" rel="noopener noreferrer">
-      {{ content()?.TRAIN.GMAP_ADDRESS }}
-    </a><br>
     <span class="whitespace-pre-line">{{ content()?.TRAIN.INSTRUCTION }}</span>
   </p>
+</div>
+
+<div class="directions__container">
+  @for (dir of content().DIRECTIONS; track dir.INSTRUCTION) {
+    <a pButton variant="outlined" [href]="dir.URL" target="_blank" rel="noopener noreferrer">
+      {{ dir.INSTRUCTION }}
+    </a>
+  }
 </div>

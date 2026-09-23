@@ -27,19 +27,17 @@ a {
   cursor: pointer;
 }
 
-p-tag {
-  transform: scale(0.7);
-  margin: 0px 1px;
-  margin-bottom: 1px;
-}
+.directions {
 
-p-table {
-  * {
-    border-color: #ac8c7b;
-  }
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    margin: 0px auto;
 
-  tr, th, td {
-    background-color: transparent;
-    padding: 2px 8px;
+    a {
+      text-decoration: none;
+    }
   }
 }

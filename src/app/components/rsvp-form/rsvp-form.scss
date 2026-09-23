@@ -3,12 +3,12 @@
   flex-direction: column;
   gap: 32px;
   margin: 0px 16px;
+  flex-grow: 1;
 }
 
 .p-button {
-  width: calc(100% - 96px);
   z-index: 1;
-  position: fixed;
-  bottom: 16px;
-  left: 16px;
+  // position: fixed;
+  // bottom: 16px;
+  // left: 16px;
 }

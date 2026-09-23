@@ -1,14 +1,12 @@
 import { Component, computed, inject, ChangeDetectionStrategy } from '@angular/core';
-import { TagModule } from 'primeng/tag';
-import { TableModule } from 'primeng/table';
+import { ButtonModule } from 'primeng/button';
 import { AppService } from '../../app.service';
 import { GETTING_HERE_CONTENT } from './getting-here.constants';
 
 @Component({
   selector: 'getting-here',
   imports: [
-    TagModule,
-    TableModule
+    ButtonModule
   ],
   templateUrl: './getting-here.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
