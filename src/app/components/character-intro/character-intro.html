@@ -4,7 +4,18 @@
       <span></span>
     }
   </div>
-  <picture>
+  <div class="character-arch__hearts" aria-hidden="true">
+    @for (heart of hearts(); track heart.id) {
+      <span
+        class="character-arch__heart"
+        [style.left]="heart.left + '%'"
+        [style.top]="heart.top + '%'"
+        [style.--heart-drift]="heart.drift + 'px'">
+        &#9829;
+      </span>
+    }
+  </div>
+  <picture (pointerdown)="emitHeart($event)">
     <source type="image/webp" [srcset]="$safeNavigationMigration(content()?.COUPLE_IMAGE_WEBP)">
     <img [id]="$safeNavigationMigration(content()?.COUPLE_IMAGE_ID)" [alt]="$safeNavigationMigration(content()?.COUPLE_IMAGE_ALT)"
       [title]="$safeNavigationMigration(content()?.COUPLE_IMAGE_TITLE)" [src]="$safeNavigationMigration(content()?.COUPLE_IMAGE_PATH)" />

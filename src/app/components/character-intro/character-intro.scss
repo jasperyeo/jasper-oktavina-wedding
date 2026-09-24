@@ -62,6 +62,23 @@ img {
     span:nth-child(7) { --petal-left: 59%; --petal-delay: -3s; --petal-duration: 9s; }
     span:nth-child(8) { --petal-left: 46%; --petal-delay: -8s; --petal-duration: 10s; }
   }
+
+  &__hearts {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    pointer-events: none;
+  }
+
+  &__heart {
+    position: absolute;
+    color: #9f1239;
+    font-size: 28px;
+    line-height: 1;
+    text-shadow: 0 2px 5px rgba(127, 29, 57, 0.35);
+    transform: translate(-50%, -50%);
+    animation: heart-float 1400ms ease-out forwards;
+  }
 }
 
 @keyframes petal-fall {
@@ -81,6 +98,22 @@ img {
   100% {
     opacity: 0;
     transform: translate3d(55px, 1150%, 0) rotate(360deg);
+  }
+}
+
+@keyframes heart-float {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.4) rotate(-12deg);
+  }
+
+  15% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate(calc(-50% + var(--heart-drift)), calc(-50% - 140px)) scale(1.15) rotate(12deg);
   }
 }
 
