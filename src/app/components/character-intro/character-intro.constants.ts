@@ -1,3 +1,5 @@
+export const PETALS: readonly number[] = [1, 2, 3, 4, 5, 6, 7, 8];
+
 export const CHARACTER_INTRO_CONTENT: any = {
   id: {
     COUPLE_IMAGE_ID: 'image__arch',

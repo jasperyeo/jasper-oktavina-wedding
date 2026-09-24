@@ -1,6 +1,6 @@
 import { Component, computed, inject, ChangeDetectionStrategy } from '@angular/core';
 import { AppService } from '../../app.service';
-import { CHARACTER_INTRO_CONTENT } from './character-intro.constants';
+import { CHARACTER_INTRO_CONTENT, PETALS } from './character-intro.constants';
 
 @Component({
   standalone: true,
@@ -14,4 +14,5 @@ export class CharacterIntro {
 
   public readonly appService: AppService = inject(AppService);
   public readonly content = computed(() => CHARACTER_INTRO_CONTENT[this.appService.country()]);
+  public readonly petals: readonly number[] = PETALS;
 }

@@ -1,7 +1,8 @@
 <div class="character-arch">
   <div class="character-arch__petals" aria-hidden="true">
-    <span></span><span></span><span></span><span></span><span></span>
-    <span></span><span></span><span></span>
+    @for (petal of petals; track petal) {
+      <span></span>
+    }
   </div>
   <picture>
     <source type="image/webp" [srcset]="$safeNavigationMigration(content()?.COUPLE_IMAGE_WEBP)">
