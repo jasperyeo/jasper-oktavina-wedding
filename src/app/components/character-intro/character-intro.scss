@@ -9,6 +9,87 @@ img {
   margin: 0px auto;
 }
 
+.character-arch {
+  position: relative;
+  width: 100%;
+  max-width: 1000px;
+  aspect-ratio: 968 / 1151;
+
+  picture {
+    position: relative;
+    z-index: 1;
+    display: block;
+  }
+
+  &__petals {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    overflow: hidden;
+    clip-path: polygon(
+      50% 0%, 66% 3%, 81% 12%, 93% 26%, 100% 40%,
+      100% 100%, 0% 100%, 0% 40%, 7% 26%, 19% 12%, 34% 3%
+    );
+
+    span {
+      position: absolute;
+      top: -8%;
+      left: var(--petal-left);
+      width: 8px;
+      height: 12px;
+      border-radius: 70% 30% 70% 30%;
+      background: #d98b9b;
+      opacity: 0;
+      animation: petal-fall var(--petal-duration) linear infinite;
+      animation-delay: var(--petal-delay);
+
+      &:nth-child(2n) {
+        background: #f0b7bf;
+      }
+
+      &:nth-child(3n) {
+        width: 6px;
+        height: 9px;
+      }
+    }
+
+    span:nth-child(1) { --petal-left: 24%; --petal-delay: -1s; --petal-duration: 7s; }
+    span:nth-child(2) { --petal-left: 39%; --petal-delay: -4s; --petal-duration: 9s; }
+    span:nth-child(3) { --petal-left: 53%; --petal-delay: -6s; --petal-duration: 8s; }
+    span:nth-child(4) { --petal-left: 67%; --petal-delay: -2s; --petal-duration: 10s; }
+    span:nth-child(5) { --petal-left: 76%; --petal-delay: -7s; --petal-duration: 8s; }
+    span:nth-child(6) { --petal-left: 32%; --petal-delay: -5s; --petal-duration: 11s; }
+    span:nth-child(7) { --petal-left: 59%; --petal-delay: -3s; --petal-duration: 9s; }
+    span:nth-child(8) { --petal-left: 46%; --petal-delay: -8s; --petal-duration: 10s; }
+  }
+}
+
+@keyframes petal-fall {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, -10%, 0) rotate(0deg);
+  }
+
+  12% {
+    opacity: 0.9;
+  }
+
+  88% {
+    opacity: 0.9;
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate3d(55px, 1150%, 0) rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .character-arch__petals {
+    display: none;
+  }
+}
+
 #image {
 
   &__arch {

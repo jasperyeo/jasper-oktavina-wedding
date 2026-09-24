@@ -1,8 +1,14 @@
-<picture>
-  <source type="image/webp" [srcset]="$safeNavigationMigration(content()?.COUPLE_IMAGE_WEBP)">
-  <img [id]="$safeNavigationMigration(content()?.COUPLE_IMAGE_ID)" [alt]="$safeNavigationMigration(content()?.COUPLE_IMAGE_ALT)"
-    [title]="$safeNavigationMigration(content()?.COUPLE_IMAGE_TITLE)" [src]="$safeNavigationMigration(content()?.COUPLE_IMAGE_PATH)" />
-</picture>
+<div class="character-arch">
+  <div class="character-arch__petals" aria-hidden="true">
+    <span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span>
+  </div>
+  <picture>
+    <source type="image/webp" [srcset]="$safeNavigationMigration(content()?.COUPLE_IMAGE_WEBP)">
+    <img [id]="$safeNavigationMigration(content()?.COUPLE_IMAGE_ID)" [alt]="$safeNavigationMigration(content()?.COUPLE_IMAGE_ALT)"
+      [title]="$safeNavigationMigration(content()?.COUPLE_IMAGE_TITLE)" [src]="$safeNavigationMigration(content()?.COUPLE_IMAGE_PATH)" />
+  </picture>
+</div>
 <h1 id="character-intro">
   <picture>
     <source type="image/webp" [srcset]="$safeNavigationMigration(content()?.COUPLE_NAME_WEBP)">
