@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, computed, HostListener, inject, signal, WritableSignal, ChangeDetectionStrategy } from '@angular/core';
+import { AfterViewInit, Component, computed, HostListener, inject, signal, WritableSignal, ChangeDetectionStrategy, viewChild, ElementRef, Signal } from '@angular/core';
 import { Button } from 'primeng/button';
 import { AppService } from '../../app.service';
 import { MUSIC_PLAYER_CONTENT } from './music-player.constants';
@@ -16,20 +16,21 @@ export class MusicPlayer implements AfterViewInit {
   public readonly appService: AppService = inject(AppService);
   public readonly content = computed(() => MUSIC_PLAYER_CONTENT[this.appService.country()]);
   public isPlaying: WritableSignal<boolean> = signal<boolean>(true);
-  protected musicPlayer: WritableSignal<HTMLAudioElement | null> = signal<HTMLAudioElement | null>(null);
+  protected readonly musicPlayer: Signal<ElementRef<HTMLAudioElement>> = viewChild.required<ElementRef<HTMLAudioElement>>('musicplayer');
 
   public ngAfterViewInit(): void {
-    this.musicPlayer.set(document.getElementById('music-player') as HTMLAudioElement);
-    this.musicPlayer()?.play();
-    this.isPlaying.set(true);
+    this.musicPlayer()?.nativeElement?.play().then(() => {
+      this.isPlaying.set(true);
+    });
   }
 
   public toggleMusic(): void {
-    if (this.musicPlayer()?.paused) {
-      this.musicPlayer()?.play();
-      this.isPlaying.set(true);
+    if (this.musicPlayer()?.nativeElement?.paused) {
+      this.musicPlayer()?.nativeElement?.play().then(() => {
+        this.isPlaying.set(true);
+      });
     } else {
-      this.musicPlayer()?.pause();
+      this.musicPlayer()?.nativeElement?.pause();
       this.isPlaying.set(false);
     }
   }
@@ -37,11 +38,12 @@ export class MusicPlayer implements AfterViewInit {
   @HostListener('document:visibilitychange')
   public onVisibilityChange(): void {
     if (document.visibilityState === 'hidden') {
-      this.musicPlayer()?.pause();
+      this.musicPlayer()?.nativeElement?.pause();
       this.isPlaying.set(false);
     } else {
-      this.musicPlayer()?.play();
-      this.isPlaying.set(true);
+      this.musicPlayer()?.nativeElement?.play().then(() => {
+        this.isPlaying.set(true);
+      });
     }
   }
 }
