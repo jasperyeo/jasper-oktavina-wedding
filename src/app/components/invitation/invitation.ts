@@ -41,10 +41,5 @@ export class Invitation {
     document.body.style.overflow = 'unset';
     this.onOpen.emit();
     // this.opened = true;
-    const audio: HTMLAudioElement | null = document.querySelector("audio");
-    if (audio) {
-      audio.volume = 0.2;
-      audio.play();
-    } 
   }
 }

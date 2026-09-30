@@ -47,6 +47,7 @@ export class App implements OnInit {
 
   public open(): void {
     this.opened.set(true);
+    this._appService.invitationOpened.set(true);
     this._document.documentElement.style.overflow = 'auto';
     window.scrollTo(0, 0);
   }
