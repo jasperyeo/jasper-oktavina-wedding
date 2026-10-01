@@ -7,7 +7,9 @@
     </span>
   }
 </h1>
-<p-toast />
+@if (downloadError(); as error) {
+  <div class="calendar-download-error" role="alert">{{ error }}</div>
+}
 <p class="text-lg">
   <span class="icon pi pi-calendar"></span><span>{{ content()?.DATE }}</span><br>
   @if (content()?.COCKTAIL) {

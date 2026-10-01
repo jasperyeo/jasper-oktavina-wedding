@@ -1,13 +1,13 @@
 <h1 class="text-5xl" id="qna">
-  {{ content()?.HEADING }}
-  @if (content()?.HEADING_CN) {
+  {{ content?.HEADING }}
+  @if (content?.HEADING_CN) {
     <span class="text-3xl">
       <br>
-      {{ content()?.HEADING_CN }}
+      {{ content?.HEADING_CN }}
     </span>
   }
 </h1>
-@for (qn of content().QUESTIONS; track qn.QUESTION) {
+@for (qn of content.QUESTIONS; track qn.QUESTION) {
   <p class="text-sm">
     <span class="font-bold">{{ qn.QUESTION }}</span>
     <br>

@@ -19,6 +19,22 @@ p {
   white-space: pre-line;
 }
 
+.calendar-download-error {
+  position: fixed;
+  z-index: 10;
+  top: 16px;
+  left: 50%;
+  max-width: calc(100vw - 32px);
+  padding: 12px 16px;
+  transform: translateX(-50%);
+  border: 1px solid #9f1239;
+  background: #fff4ef;
+  color: #7f1d1d;
+  text-align: center;
+  white-space: pre-line;
+  box-shadow: 0 2px 8px rgba(69, 67, 64, 0.2);
+}
+
 .icon {
   margin-right: 16px;
 }

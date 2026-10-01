@@ -18,6 +18,7 @@ import { Toast } from 'primeng/toast';
 export class QnA {
 
   private _messageService = inject(MessageService);
+  public readonly appService: AppService = inject(AppService);
   public readonly content = QNA_CONTENT;
   public readonly hashtag = HASHTAG;
 
@@ -31,9 +32,9 @@ export class QnA {
   public async copyHashtag(): Promise<void> {
     try {
       await navigator.clipboard.writeText(HASHTAG);
-      this._messageService.add({ severity: 'success', summary: this.content().COPIED });
+      this._messageService.add({ severity: 'success', summary: this.content.COPIED });
     } catch {
-      this._messageService.add({ severity: 'error', summary: this.content().COPY_FAILED });
+      this._messageService.add({ severity: 'error', summary: this.content.COPY_FAILED });
     }
   }
 }

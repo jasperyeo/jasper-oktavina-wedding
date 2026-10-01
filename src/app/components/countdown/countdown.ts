@@ -1,7 +1,5 @@
 import { AfterViewInit, ChangeDetectionStrategy, Component, computed, DestroyRef, inject, Signal, signal, WritableSignal } from '@angular/core';
 import { Button } from 'primeng/button';
-import { MessageService } from 'primeng/api';
-import { Toast } from 'primeng/toast';
 import { createEvent, type EventAttributes } from 'ics';
 import { AppService } from '../../app.service';
 import { COUNTDOWN_CONTENT } from './countdown.constants';
@@ -9,15 +7,13 @@ import { COUNTDOWN_CONTENT } from './countdown.constants';
 @Component({
   standalone: true,
   selector: 'countdown',
-  imports: [ Button, Toast ],
-  providers: [MessageService],
+  imports: [ Button ],
   templateUrl: './countdown.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
   styleUrl: './countdown.scss'
 })
 export class Countdown implements AfterViewInit {
 
-  private readonly messageService: MessageService = inject(MessageService);
   private readonly destroyRef: DestroyRef = inject(DestroyRef);
   private countdownInterval: ReturnType<typeof setInterval> | undefined;
   public readonly appService: AppService = inject(AppService);
@@ -29,6 +25,7 @@ export class Countdown implements AfterViewInit {
   public readonly hours: WritableSignal<number> = signal<number>(0);
   public readonly minutes: WritableSignal<number> = signal<number>(0);
   public readonly seconds: WritableSignal<number> = signal<number>(0);
+  public readonly downloadError: WritableSignal<string | null> = signal<string | null>(null);
   public readonly event: Signal<EventAttributes> = computed(() => {
     return {
       start: this.content().CALENDAR_DATETIME,
@@ -73,6 +70,7 @@ export class Countdown implements AfterViewInit {
   public async downloadCal(): Promise<void> {
     let url: string | undefined;
     let anchor: HTMLAnchorElement | undefined;
+    this.downloadError.set(null);
     try {
       const filename: string = this.content().CALENDAR_TITLE + '.ics';
       const file: Blob = await new Promise((resolve, reject) => {
@@ -94,7 +92,7 @@ export class Countdown implements AfterViewInit {
       anchor.click();
     } catch (error) {
       console.error('Unable to download the calendar event.', error);
-      this.messageService.add({ severity: 'error', summary: this.content().CALENDAR_DOWNLOAD_FAILED });
+      this.downloadError.set(this.content().CALENDAR_DOWNLOAD_FAILED);
     } finally {
       if (anchor?.parentNode) {
         anchor.parentNode.removeChild(anchor);
