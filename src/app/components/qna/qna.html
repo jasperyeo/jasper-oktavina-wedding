@@ -1,4 +1,4 @@
-<h1 class="text-5xl" id="getting-here">
+<h1 class="text-5xl" id="qna">
   {{ content()?.HEADING }}
   @if (content()?.HEADING_CN) {
     <span class="text-3xl">
@@ -13,7 +13,7 @@
     <br>
     @for (segment of splitAnswer(qn.ANSWER); let idx = $index; track segment + '_' + idx) {
       @if (segment === hashtag) {
-        <a (click)="copyHashtag()">{{ segment }}</a>
+        <button type="button" class="hashtag-copy" (click)="copyHashtag()">{{ segment }}</button>
       }
       @if (segment !== hashtag) {
         {{ segment }}

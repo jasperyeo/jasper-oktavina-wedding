@@ -29,9 +29,16 @@ export class Invitation {
     }
   });
   public onOpen: OutputEmitterRef<void> = output<void>();
-  // @HostBinding('class.opened') public opened: boolean = false;
-  @HostBinding('class.id') classId: boolean = this.country() === 'id';
-  @HostBinding('class.sg') classSg: boolean = this.country() === 'sg';
+
+  @HostBinding('class.id')
+  public get classId(): boolean {
+    return this.country() === 'id';
+  }
+
+  @HostBinding('class.sg')
+  public get classSg(): boolean {
+    return this.country() === 'sg';
+  }
 
   constructor() {
     document.body.style.overflow = 'hidden';
@@ -41,10 +48,5 @@ export class Invitation {
     document.body.style.overflow = 'unset';
     this.onOpen.emit();
     // this.opened = true;
-    const audio: HTMLAudioElement | null = document.querySelector("audio");
-    if (audio) {
-      audio.volume = 0.2;
-      audio.play();
-    } 
   }
 }
