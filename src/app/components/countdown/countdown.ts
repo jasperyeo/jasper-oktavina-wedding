@@ -72,6 +72,7 @@ export class Countdown implements AfterViewInit {
 
   public async downloadCal(): Promise<void> {
     let url: string | undefined;
+    let anchor: HTMLAnchorElement | undefined;
     try {
       const filename: string = this.content().CALENDAR_TITLE + '.ics';
       const file: Blob = await new Promise((resolve, reject) => {
@@ -86,16 +87,18 @@ export class Countdown implements AfterViewInit {
         });
       });
       url = URL.createObjectURL(file);
-      const anchor: HTMLAnchorElement = document.createElement('a');
+      anchor = document.createElement('a');
       anchor.href = url;
       anchor.download = filename;
       document.body.appendChild(anchor);
       anchor.click();
-      document.body.removeChild(anchor);
     } catch (error) {
       console.error('Unable to download the calendar event.', error);
       this.messageService.add({ severity: 'error', summary: this.content().CALENDAR_DOWNLOAD_FAILED });
     } finally {
+      if (anchor?.parentNode) {
+        anchor.parentNode.removeChild(anchor);
+      }
       if (url) {
         URL.revokeObjectURL(url);
       }
