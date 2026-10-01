@@ -13,20 +13,18 @@ import { MUSIC_PLAYER_CONTENT } from './music-player.constants';
 })
 export class MusicPlayer {
 
-  public readonly appService: AppService = inject(AppService);
-  public readonly content = computed(() => MUSIC_PLAYER_CONTENT[this.appService.country()]);
-  public isPlaying: WritableSignal<boolean> = signal<boolean>(true);
+  private readonly _appService: AppService = inject(AppService);
+  protected readonly content = computed(() => MUSIC_PLAYER_CONTENT[this._appService.country()]);
+  protected readonly isPlaying: WritableSignal<boolean> = signal<boolean>(true);
   protected readonly musicPlayer: Signal<ElementRef<HTMLAudioElement> | undefined> = viewChild<ElementRef<HTMLAudioElement>>('musicplayer');
-  private readonly playbackEffect = effect(() => {
-    if (!this.appService.invitationOpened()) {
+  private readonly _playbackEffect = effect(() => {
+    if (!this._appService.invitationOpened()) {
       return;
     }
-
     const audio: HTMLAudioElement | undefined = this.musicPlayer()?.nativeElement;
     if (!audio) {
       return;
     }
-
     audio.volume = 0.2;
     void audio.play().then(() => {
       this.isPlaying.set(true);
@@ -52,7 +50,7 @@ export class MusicPlayer {
     if (document.visibilityState === 'hidden') {
       this.musicPlayer()?.nativeElement?.pause();
       this.isPlaying.set(false);
-    } else if (this.appService.invitationOpened()) {
+    } else if (this._appService.invitationOpened()) {
       const audio: HTMLAudioElement | undefined = this.musicPlayer()?.nativeElement;
       if (!audio) {
         return;
