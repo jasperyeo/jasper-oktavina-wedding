@@ -1,4 +1,6 @@
-export const GALLERY_CONTENT: any = {
+import { Country } from '../../app.constants';
+
+export const GALLERY_CONTENT: Record<Country, any> = {
   id: {
     TITLE: 'galeri',
     ITEM_ALT: 'Prewed Shoot at Surabaya, Indonesia',

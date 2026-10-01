@@ -1,4 +1,6 @@
-export const CULTURAL_LOGO_INTRO_CONTENT: any = {
+import { Country } from '../../app.constants';
+
+export const CULTURAL_LOGO_INTRO_CONTENT: Record<Country, any> = {
   id: {
     LOGO_IMAGE_ID: 'image__logo',
     LOGO_IMAGE_ALT: 'BISMILLAHIRRAHMANIRRAHIM',

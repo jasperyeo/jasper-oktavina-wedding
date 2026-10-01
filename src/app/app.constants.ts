@@ -1,3 +1,5 @@
+export type Country = 'sg' | 'id';
+
 export const THEME_PRESET: any = {
   semantic: {
     primary: {
@@ -68,6 +70,6 @@ export const HEADER_AND_FOOTER: any = {
   }
 }
 
-export const DEFAULT_COUNTRY: string = 'sg';
+export const DEFAULT_COUNTRY: Country = 'sg';
 
 export const HASHTAG: string = '#LifeIsJasOkWithYou';
