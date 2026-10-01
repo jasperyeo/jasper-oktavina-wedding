@@ -16,10 +16,10 @@ import { EVENT_INFO_CONTENT } from './event-info.constants';
 })
 export class EventInfo {
 
-  private _messageService = inject(MessageService);
-  public readonly appService: AppService = inject(AppService);
-  public readonly content = computed(() => EVENT_INFO_CONTENT[this.appService.country()]);
-  public readonly hashtag = HASHTAG;
+  private readonly _messageService = inject(MessageService);
+  private readonly _appService: AppService = inject(AppService);
+  protected readonly content = computed(() => EVENT_INFO_CONTENT[this._appService.country()]);
+  protected readonly hashtag = HASHTAG;
 
   public async copyHashtag(): Promise<void> {
     try {
