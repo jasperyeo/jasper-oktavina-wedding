@@ -14,19 +14,18 @@ import { COUNTDOWN_CONTENT } from './countdown.constants';
 })
 export class Countdown implements AfterViewInit {
 
-  private readonly destroyRef: DestroyRef = inject(DestroyRef);
+  private readonly _destroyRef: DestroyRef = inject(DestroyRef);
   private countdownInterval: ReturnType<typeof setInterval> | undefined;
-  public readonly appService: AppService = inject(AppService);
-  public readonly content = computed(() => COUNTDOWN_CONTENT[this.appService.country()]);
-  public readonly year: WritableSignal<number> = signal<number>(new Date().getFullYear()) ;
-  public readonly weddingDate: Signal<Date> = computed(() => new Date(this.content().COUNTDOWN_DATETIME));
-  public readonly weddingDatetime: Signal<number> = computed(() => this.weddingDate().getTime());
-  public readonly days: WritableSignal<number> = signal<number>(0);
-  public readonly hours: WritableSignal<number> = signal<number>(0);
-  public readonly minutes: WritableSignal<number> = signal<number>(0);
-  public readonly seconds: WritableSignal<number> = signal<number>(0);
-  public readonly downloadError: WritableSignal<string | null> = signal<string | null>(null);
-  public readonly event: Signal<EventAttributes> = computed(() => {
+  protected readonly appService: AppService = inject(AppService);
+  protected readonly content = computed(() => COUNTDOWN_CONTENT[this.appService.country()]);
+  private readonly _weddingDate: Signal<Date> = computed(() => new Date(this.content().COUNTDOWN_DATETIME));
+  private readonly _weddingDatetime: Signal<number> = computed(() => this._weddingDate().getTime());
+  protected readonly days: WritableSignal<number> = signal<number>(0);
+  protected readonly hours: WritableSignal<number> = signal<number>(0);
+  protected readonly minutes: WritableSignal<number> = signal<number>(0);
+  protected readonly seconds: WritableSignal<number> = signal<number>(0);
+  protected readonly downloadError: WritableSignal<string | null> = signal<string | null>(null);
+  protected readonly event: Signal<EventAttributes> = computed(() => {
     return {
       start: this.content().CALENDAR_DATETIME,
       duration: this.content().CALENDAR_DURATION,
@@ -40,11 +39,11 @@ export class Countdown implements AfterViewInit {
   });
 
   public ngAfterViewInit(): void {
-    this.weddingDate();
-    this.weddingDatetime();
-    this.updateCountdown();
-    this.countdownInterval = setInterval(() => this.updateCountdown(), 1000);
-    this.destroyRef.onDestroy(() => {
+    this._weddingDate();
+    this._weddingDatetime();
+    this._updateCountdown();
+    this.countdownInterval = setInterval(() => this._updateCountdown(), 1000);
+    this._destroyRef.onDestroy(() => {
       if (this.countdownInterval !== undefined) {
         clearInterval(this.countdownInterval);
       }
@@ -52,8 +51,8 @@ export class Countdown implements AfterViewInit {
     this.event();
   }
 
-  private updateCountdown(): void {
-    const diff: number = this.weddingDatetime() - new Date().getTime();
+  private _updateCountdown(): void {
+    const diff: number = this._weddingDatetime() - new Date().getTime();
     if (diff > 0) {
       this.days.set(Math.floor(diff / (1000 * 60 * 60 * 24)));
       this.hours.set(Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)));
@@ -67,7 +66,7 @@ export class Countdown implements AfterViewInit {
     }
   }
 
-  public async downloadCal(): Promise<void> {
+  protected async downloadCal(): Promise<void> {
     let url: string | undefined;
     let anchor: HTMLAnchorElement | undefined;
     this.downloadError.set(null);

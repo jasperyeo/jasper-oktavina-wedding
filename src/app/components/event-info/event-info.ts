@@ -21,7 +21,7 @@ export class EventInfo {
   protected readonly content = computed(() => EVENT_INFO_CONTENT[this._appService.country()]);
   protected readonly hashtag = HASHTAG;
 
-  public async copyHashtag(): Promise<void> {
+  protected async copyHashtag(): Promise<void> {
     try {
       await navigator.clipboard.writeText(HASHTAG);
       this._messageService.add({ severity: 'success', summary: this.content().COPIED });

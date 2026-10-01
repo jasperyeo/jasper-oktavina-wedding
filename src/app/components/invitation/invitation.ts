@@ -44,7 +44,7 @@ export class Invitation {
     document.body.style.overflow = 'hidden';
   }
 
-  public openInvitation(): void {
+  protected openInvitation(): void {
     document.body.style.overflow = 'unset';
     this.onOpen.emit();
   }

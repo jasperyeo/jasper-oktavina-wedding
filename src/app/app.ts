@@ -21,7 +21,7 @@ export class App implements OnInit {
   private readonly _document: Document = inject(DOCUMENT);
   private readonly _router: Router = inject(Router);
   private readonly _appService: AppService = inject(AppService);
-  public readonly content = computed(() => {
+  protected readonly content = computed(() => {
     return {
       ...HEADER_AND_FOOTER
     };
@@ -30,8 +30,8 @@ export class App implements OnInit {
     id: 'id-ID',
     sg: 'en-SG'
   };
-  public country: WritableSignal<string> = signal<string>('');
-  public opened: WritableSignal<boolean> = signal<boolean>(false);
+  protected country: WritableSignal<string> = signal<string>('');
+  protected opened: WritableSignal<boolean> = signal<boolean>(false);
 
   public ngOnInit(): void {
     this._router.events.pipe(
@@ -45,7 +45,7 @@ export class App implements OnInit {
     this._document.documentElement.style.overflow = 'hidden';
   }
 
-  public open(): void {
+  protected open(): void {
     this.opened.set(true);
     this._appService.invitationOpened.set(true);
     this._document.documentElement.style.overflow = 'auto';

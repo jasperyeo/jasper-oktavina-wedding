@@ -19,13 +19,13 @@ interface HeartEffect {
 })
 export class CharacterIntro {
 
-  public readonly appService: AppService = inject(AppService);
-  public readonly content = computed(() => CHARACTER_INTRO_CONTENT[this.appService.country()]);
-  public readonly petals: readonly number[] = PETALS;
-  public readonly hearts = signal<readonly HeartEffect[]>([]);
+  private readonly _appService: AppService = inject(AppService);
+  protected readonly content = computed(() => CHARACTER_INTRO_CONTENT[this._appService.country()]);
+  protected readonly petals: readonly number[] = PETALS;
+  protected readonly hearts = signal<readonly HeartEffect[]>([]);
   private heartId: number = 0;
 
-  public emitHeart(event: PointerEvent): void {
+  protected emitHeart(event: PointerEvent): void {
     const arch = event.currentTarget as HTMLElement;
     const bounds = arch.getBoundingClientRect();
     const heart: HeartEffect = {

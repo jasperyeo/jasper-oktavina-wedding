@@ -33,7 +33,7 @@ export class MusicPlayer {
     });
   });
 
-  public toggleMusic(): void {
+  protected toggleMusic(): void {
     const audio: HTMLAudioElement | undefined = this.musicPlayer()?.nativeElement;
     if (audio?.paused) {
       void audio.play().then(() => {
@@ -46,7 +46,7 @@ export class MusicPlayer {
   }
 
   @HostListener('document:visibilitychange')
-  public onVisibilityChange(): void {
+  protected onVisibilityChange(): void {
     if (document.visibilityState === 'hidden') {
       this.musicPlayer()?.nativeElement?.pause();
       this.isPlaying.set(false);
