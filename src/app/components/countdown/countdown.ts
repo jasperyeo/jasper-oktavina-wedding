@@ -72,8 +72,11 @@ export class Countdown implements AfterViewInit {
       createEvent(this.event(), (error, value) => {
         if (error) {
           reject(error);
+          return;
         }
-        resolve(new File([value], filename, { type: 'text/calendar' }));
+        resolve(new File([value], filename, {
+          type: 'text/calendar'
+        }));
       });
     });
     const url: string = URL.createObjectURL(file);
