@@ -4,6 +4,7 @@ export const GETTING_HERE_CONTENT: any = {
   HEADING: 'q & a',
   HEADING_CN: '問答',
   COPIED: 'Hashtag has been copied!\nHashtag 已複製！',
+  COPY_FAILED: 'Could not copy the hashtag. Please copy it manually.\n無法複製標籤，請手動複製。',
   QUESTIONS: [
     {
       "QUESTION": "When is the RSVP deadline?\n請問最遲何時需要回覆是否出席？",

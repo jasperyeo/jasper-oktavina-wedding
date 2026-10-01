@@ -33,8 +33,12 @@ export class QnA {
     );
   }
 
-  public copyHashtag(): void {
-    navigator.clipboard.writeText(HASHTAG);
-    this._messageService.add({ severity: 'success', summary: this.content().COPIED });
+  public async copyHashtag(): Promise<void> {
+    try {
+      await navigator.clipboard.writeText(HASHTAG);
+      this._messageService.add({ severity: 'success', summary: this.content().COPIED });
+    } catch {
+      this._messageService.add({ severity: 'error', summary: this.content().COPY_FAILED });
+    }
   }
 }
