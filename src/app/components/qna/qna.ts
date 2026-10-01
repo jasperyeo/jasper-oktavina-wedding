@@ -18,7 +18,6 @@ import { Toast } from 'primeng/toast';
 export class QnA {
 
   private _messageService = inject(MessageService);
-  public readonly appService: AppService = inject(AppService);
   public readonly content = QNA_CONTENT;
   public readonly hashtag = HASHTAG;
 
