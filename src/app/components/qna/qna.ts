@@ -1,5 +1,4 @@
-import { Component, computed, inject, ChangeDetectionStrategy } from '@angular/core';
-import { AppService } from '../../app.service';
+import { Component, inject, ChangeDetectionStrategy } from '@angular/core';
 import { HASHTAG } from '../../app.constants';
 import { QNA_CONTENT } from './qna.constants';
 import { MessageService } from 'primeng/api';
@@ -17,19 +16,18 @@ import { Toast } from 'primeng/toast';
 })
 export class QnA {
 
-  private _messageService = inject(MessageService);
-  public readonly appService: AppService = inject(AppService);
-  public readonly content = QNA_CONTENT;
-  public readonly hashtag = HASHTAG;
+  private readonly _messageService = inject(MessageService);
+  protected readonly content = QNA_CONTENT;
+  protected readonly hashtag = HASHTAG;
 
-  public splitAnswer(answer: string): Array<string> {
+  protected splitAnswer(answer: string): Array<string> {
     const token = HASHTAG;
     return answer.split(token).flatMap((part, index, array) =>
       index < array.length - 1 ? [part, token] : [part]
     );
   }
 
-  public async copyHashtag(): Promise<void> {
+  protected async copyHashtag(): Promise<void> {
     try {
       await navigator.clipboard.writeText(HASHTAG);
       this._messageService.add({ severity: 'success', summary: this.content.COPIED });

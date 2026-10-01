@@ -1,4 +1,5 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
+import { PARENTS_INFO_CONTENT } from './parents-info.constants';
 
 @Component({
   standalone: true,
@@ -10,4 +11,5 @@ import { Component, ChangeDetectionStrategy } from '@angular/core';
 })
 export class ParentsInfo {
 
+  protected readonly content = PARENTS_INFO_CONTENT;
 }
