@@ -17,10 +17,10 @@ import { GALLERY_CONTENT, RESPONSIVE_OPTIONS, AUTOPLAY, CIRCULAR, NUMVISIBLE } f
 })
 export class Gallery implements OnInit {
 
-  public readonly appService: AppService = inject(AppService);
-  public readonly content = computed(() => GALLERY_CONTENT[this.appService.country()]);
-  public images: ModelSignal<any[]> = model<any[]>([]);
-  public responsiveOptions: WritableSignal<any[]> = signal<any[]>(RESPONSIVE_OPTIONS);
+  private readonly _appService: AppService = inject(AppService);
+  protected readonly content = computed(() => GALLERY_CONTENT[this._appService.country()]);
+  protected readonly images: ModelSignal<any[]> = model<any[]>([]);
+  protected readonly responsiveOptions: WritableSignal<any[]> = signal<any[]>(RESPONSIVE_OPTIONS);
   public readonly AUTOPLAY = AUTOPLAY;
   public readonly CIRCULAR = CIRCULAR;
   public readonly NUMVISIBLE = NUMVISIBLE;
