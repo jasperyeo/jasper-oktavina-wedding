@@ -1,4 +1,4 @@
-import { Component, computed, inject, ChangeDetectionStrategy } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { ButtonModule } from 'primeng/button';
 import { GETTING_HERE_CONTENT } from './getting-here.constants';
 
@@ -13,5 +13,5 @@ import { GETTING_HERE_CONTENT } from './getting-here.constants';
 })
 export class GettingHere {
 
-  public readonly content = GETTING_HERE_CONTENT;
+  protected readonly content = GETTING_HERE_CONTENT;
 }
