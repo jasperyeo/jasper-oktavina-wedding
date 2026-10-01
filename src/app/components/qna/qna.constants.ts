@@ -1,6 +1,6 @@
 import { HASHTAG } from '../../app.constants';
 
-export const GETTING_HERE_CONTENT: any = {
+export const QNA_CONTENT: any = {
   HEADING: 'q & a',
   HEADING_CN: '問答',
   COPIED: 'Hashtag has been copied!\nHashtag 已複製！',

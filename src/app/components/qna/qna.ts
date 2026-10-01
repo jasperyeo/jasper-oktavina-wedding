@@ -1,17 +1,13 @@
 import { Component, computed, inject, ChangeDetectionStrategy } from '@angular/core';
-import { TagModule } from 'primeng/tag';
-import { TableModule } from 'primeng/table';
 import { AppService } from '../../app.service';
 import { HASHTAG } from '../../app.constants';
-import { GETTING_HERE_CONTENT } from './qna.constants';
+import { QNA_CONTENT } from './qna.constants';
 import { MessageService } from 'primeng/api';
 import { Toast } from 'primeng/toast';
 
 @Component({
   selector: 'qna',
   imports: [
-    TagModule,
-    TableModule,
     Toast
   ],
   providers: [ MessageService ],
@@ -23,7 +19,7 @@ export class QnA {
 
   private _messageService = inject(MessageService);
   public readonly appService: AppService = inject(AppService);
-  public readonly content = computed(() => GETTING_HERE_CONTENT);
+  public readonly content = QNA_CONTENT;
   public readonly hashtag = HASHTAG;
 
   public splitAnswer(answer: string): Array<string> {
