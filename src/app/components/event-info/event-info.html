@@ -10,8 +10,6 @@
   {{ content()?.WELCOME }}
 </p>
 <p-toast />
-<p-button link (click)="copyHashtag()">
-  <p class="text-base">
-    <span class="icon pi pi-instagram"></span><span>{{ hashtag }}</span><span class="icon pi pi-clone"></span><br>
-  </p>
-</p-button>
+<button type="button" class="text-base" (click)="copyHashtag()">
+  <span class="icon pi pi-instagram"></span><span>{{ hashtag }}</span><span class="icon pi pi-clone"></span>
+</button>
