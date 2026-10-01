@@ -2,7 +2,7 @@ import { MenuItem } from 'primeng/api';
 
 export interface WeddingMenuItem extends MenuItem {
   anchor: string;
-}
+};
 
 export const NAV_MENU_CONTENT: Record<string, WeddingMenuItem[]> = {
   id: [

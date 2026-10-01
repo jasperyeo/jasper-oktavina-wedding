@@ -12,6 +12,6 @@ import { LOCATION_CONTENT } from './location.constants';
 })
 export class Location {
 
-  public readonly appService: AppService = inject(AppService);
-  public readonly content = computed(() => LOCATION_CONTENT[this.appService.country()]);
+  protected readonly appService: AppService = inject(AppService);
+  protected readonly content = computed(() => LOCATION_CONTENT[this.appService.country()]);
 }

@@ -1,6 +1,5 @@
-import { Component, computed, inject, ChangeDetectionStrategy } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { SEPARATOR_CONTENT } from './separator.constants';
-import { AppService } from '../../app.service';
 
 @Component({
   standalone: true,
@@ -12,6 +11,5 @@ import { AppService } from '../../app.service';
 })
 export class Separator {
 
-  public readonly appService: AppService = inject(AppService);
-  public readonly content = computed(() => SEPARATOR_CONTENT);
+  protected readonly content = SEPARATOR_CONTENT;
 }

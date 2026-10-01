@@ -12,10 +12,10 @@ import { AppService } from '../../app.service';
 })
 export class CulturalLogoIntro {
 
-  public readonly appService: AppService = inject(AppService);
-  public readonly content = computed(() => CULTURAL_LOGO_INTRO_CONTENT[this.appService.country()]);
+  protected readonly appService: AppService = inject(AppService);
+  protected readonly content = computed(() => CULTURAL_LOGO_INTRO_CONTENT[this.appService.country()]);
 
-  public playTiltAndMoveShake(event: MouseEvent) {
+  protected playTiltAndMoveShake(event: MouseEvent) {
     const target = event.currentTarget as HTMLElement;
     target.classList.add('tilt-n-move-shaking');
     target.addEventListener('animationend', () => {

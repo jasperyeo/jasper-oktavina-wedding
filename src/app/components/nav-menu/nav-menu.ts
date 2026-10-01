@@ -14,17 +14,17 @@ import { NAV_MENU_CONTENT, WeddingMenuItem } from './nav-menu.constants';
     Menubar,
     Menu,
     ButtonLabel
-],
+  ],
   templateUrl: './nav-menu.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
   styleUrl: './nav-menu.scss'
 })
 export class NavMenu {
 
-  public readonly appService: AppService = inject(AppService);
-  public readonly viewportScroller: ViewportScroller = inject(ViewportScroller);
-  public readonly content = computed(() => NAV_MENU_CONTENT[this.appService.country()]);
-  public readonly items = computed<WeddingMenuItem[]>(() => {
+  private readonly _appService: AppService = inject(AppService);
+  private readonly _viewportScroller: ViewportScroller = inject(ViewportScroller);
+  protected readonly content = computed(() => NAV_MENU_CONTENT[this._appService.country()]);
+  protected readonly items = computed<WeddingMenuItem[]>(() => {
     return this.content().map((item: WeddingMenuItem, index: number) => {
       if (!index) {
         return {
@@ -40,7 +40,7 @@ export class NavMenu {
         return {
           ...item,
           command: () => {
-            this.viewportScroller.scrollToAnchor(item.anchor);
+            this._viewportScroller.scrollToAnchor(item.anchor);
           }
         };
       }

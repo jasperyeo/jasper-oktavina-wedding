@@ -1,5 +1,6 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { ButtonModule } from 'primeng/button';
+import { RSVP_FORM_CONTENT } from './rsvp-form.constants';
 
 @Component({
   standalone: true,
@@ -13,4 +14,5 @@ import { ButtonModule } from 'primeng/button';
 })
 export class RsvpForm {
 
+  protected readonly content = RSVP_FORM_CONTENT;
 }
