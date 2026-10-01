@@ -4,7 +4,7 @@ import { NavigationEnd, Router, RouterOutlet } from '@angular/router';
 import { filter } from 'rxjs';
 import { Invitation } from './components/invitation/invitation';
 import { AppService } from './app.service';
-import { DEFAULT_COUNTRY, HEADER_AND_FOOTER } from './app.constants';
+import { HEADER_AND_FOOTER } from './app.constants';
 
 @Component({
   selector: 'app-root',
@@ -26,7 +26,7 @@ export class App implements OnInit {
       ...HEADER_AND_FOOTER
     };
   });
-  private readonly _langMap: any = {
+  private readonly _langMap: Record<string, string> = {
     id: 'id-ID',
     sg: 'en-SG'
   };
@@ -38,7 +38,7 @@ export class App implements OnInit {
       filter(event => event instanceof NavigationEnd)
     ).subscribe((event: NavigationEnd) => {
       const country: string = event.urlAfterRedirects.substring(1);
-      this.country.set(!this._langMap[country] ? DEFAULT_COUNTRY : country);
+      this.country.set(country);
       this._appService.country.set(this.country());
       this._document.documentElement.lang = this._langMap[this.country()];
     });
