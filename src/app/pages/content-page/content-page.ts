@@ -1,4 +1,4 @@
-import { Component, computed, inject, ChangeDetectionStrategy } from '@angular/core';
+import { Component, inject, ChangeDetectionStrategy } from '@angular/core';
 import { AnimateOnScrollModule } from 'primeng/animateonscroll';
 import { Separator } from '../../components/separator/separator';
 import { NavMenu } from '../../components/nav-menu/nav-menu';

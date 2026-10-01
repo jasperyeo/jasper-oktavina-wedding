@@ -1,7 +1,6 @@
 import { ApplicationConfig, provideBrowserGlobalErrorListeners, provideZonelessChangeDetection } from '@angular/core';
 import { provideRouter, withInMemoryScrolling } from '@angular/router';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
-import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { providePrimeNG } from 'primeng/config';
 import { routes } from './app.routes';
 import { definePreset } from '@primeuix/themes';
@@ -19,14 +18,12 @@ export const appConfig: ApplicationConfig = {
       anchorScrolling: 'enabled',
       scrollPositionRestoration: 'enabled'
     })),
-    provideAnimationsAsync(),
     providePrimeNG({
       theme: {
         preset: rosePreset,
         options: {
           prefix: 'p',
-          // darkModeSelector: 'system',
-          darkModeSelector: false || 'none',
+          darkModeSelector: 'none',
           cssLayer: false
         }
       },
