@@ -30,8 +30,15 @@ export class Invitation {
   });
   public onOpen: OutputEmitterRef<void> = output<void>();
   // @HostBinding('class.opened') public opened: boolean = false;
-  @HostBinding('class.id') classId: boolean = this.country() === 'id';
-  @HostBinding('class.sg') classSg: boolean = this.country() === 'sg';
+  @HostBinding('class.id')
+  public get classId(): boolean {
+    return this.country() === 'id';
+  }
+
+  @HostBinding('class.sg')
+  public get classSg(): boolean {
+    return this.country() === 'sg';
+  }
 
   constructor() {
     document.body.style.overflow = 'hidden';
