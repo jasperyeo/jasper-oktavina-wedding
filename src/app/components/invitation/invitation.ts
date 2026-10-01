@@ -20,7 +20,7 @@ import { HEADER_AND_FOOTER } from '../../app.constants';
 export class Invitation {
 
   public readonly country: InputSignal<string> = input<string>('sg');
-  public readonly content = computed(() => {
+  protected readonly content = computed(() => {
     return {
       ...INVITATION_CONTENT[this.country()],
       ...CHARACTER_INTRO_CONTENT[this.country()],
@@ -28,7 +28,7 @@ export class Invitation {
       ...CONTENT_PAGE_CONTENTS
     }
   });
-  public onOpen: OutputEmitterRef<void> = output<void>();
+  protected readonly onOpen: OutputEmitterRef<void> = output<void>();
 
   @HostBinding('class.id')
   public get classId(): boolean {
@@ -47,6 +47,5 @@ export class Invitation {
   public openInvitation(): void {
     document.body.style.overflow = 'unset';
     this.onOpen.emit();
-    // this.opened = true;
   }
 }
