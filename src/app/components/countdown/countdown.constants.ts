@@ -1,4 +1,6 @@
-export const COUNTDOWN_CONTENT: any = {
+import { Country } from '../../app.constants';
+
+export const COUNTDOWN_CONTENT: Record<Country, any> = {
   id: {
     TITLE: 'countdown',
     DATE: 'TANGGAL ACARA: 27 SEP 2025',

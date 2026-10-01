@@ -1,4 +1,6 @@
-export const MUSIC_PLAYER_CONTENT: any = {
+import { Country } from '../../app.constants';
+
+export const MUSIC_PLAYER_CONTENT: Record<Country, any> = {
   id: {
     BG_MUSIC_PATH: 'assets/audio/bg-music-id.mp3'
   },

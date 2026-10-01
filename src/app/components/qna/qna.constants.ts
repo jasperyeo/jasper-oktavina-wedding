@@ -1,6 +1,19 @@
 import { HASHTAG } from '../../app.constants';
 
-export const QNA_CONTENT: any = {
+interface QnaItem {
+  QUESTION: string;
+  ANSWER: string;
+}
+
+interface QnaContent {
+  HEADING: string;
+  HEADING_CN: string;
+  COPIED: string;
+  COPY_FAILED: string;
+  QUESTIONS: readonly QnaItem[];
+}
+
+export const QNA_CONTENT = {
   HEADING: 'q & a',
   HEADING_CN: '問答',
   COPIED: 'Hashtag has been copied!\nHashtag 已複製！',
@@ -39,4 +52,4 @@ export const QNA_CONTENT: any = {
       "ANSWER": "Please approach the banquet manager or our bridal team—we’ll be happy to assist you.\n請聯絡宴會經理或婚禮接待團隊，我們將樂意為您提供協助。"
     }
   ]
-};
+} satisfies QnaContent;

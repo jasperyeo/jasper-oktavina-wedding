@@ -1,10 +1,11 @@
 import { MenuItem } from 'primeng/api';
+import { Country } from '../../app.constants';
 
 export interface WeddingMenuItem extends MenuItem {
   anchor: string;
 };
 
-export const NAV_MENU_CONTENT: Record<string, WeddingMenuItem[]> = {
+export const NAV_MENU_CONTENT: Record<Country, WeddingMenuItem[]> = {
   id: [
     { label: 'Beranda', anchor: '' },
     { label: 'Lokasi', anchor: 'separator-location' },

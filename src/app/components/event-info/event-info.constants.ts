@@ -1,4 +1,6 @@
-export const EVENT_INFO_CONTENT: any = {
+import { Country } from '../../app.constants';
+
+export const EVENT_INFO_CONTENT: Record<Country, any> = {
   id: {
     DATE: 'TANGGAL ACARA: 27 SEP 2025',
     VENUE: 'TEMPAT ACARA: SAM ANNA',

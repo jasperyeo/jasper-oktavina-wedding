@@ -1,4 +1,6 @@
-export const INVITATION_CONTENT: any = {
+import { Country } from '../../app.constants';
+
+export const INVITATION_CONTENT: Record<Country, any> = {
   id: {
     PRE_NAME: 'The Wedding Of',
     POST_NAME_1: 'Kepada Yang Terhormat',

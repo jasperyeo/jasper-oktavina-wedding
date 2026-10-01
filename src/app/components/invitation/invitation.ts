@@ -4,7 +4,7 @@ import { Button } from 'primeng/button';
 import { INVITATION_CONTENT } from './invitation.constants';
 import { CHARACTER_INTRO_CONTENT } from '../character-intro/character-intro.constants';
 import { CONTENT_PAGE_CONTENTS } from '../../pages/content-page/content-page.constants';
-import { HEADER_AND_FOOTER } from '../../app.constants';
+import { Country, HEADER_AND_FOOTER } from '../../app.constants';
 
 @Component({
   standalone: true,
@@ -19,7 +19,7 @@ import { HEADER_AND_FOOTER } from '../../app.constants';
 })
 export class Invitation {
 
-  public readonly country: InputSignal<string> = input<string>('sg');
+  public readonly country: InputSignal<Country> = input<Country>('sg');
   protected readonly content = computed(() => {
     return {
       ...INVITATION_CONTENT[this.country()],

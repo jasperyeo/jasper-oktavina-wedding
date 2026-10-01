@@ -1,4 +1,6 @@
-export const LOCATION_CONTENT: any = {
+import { Country } from '../../app.constants';
+
+export const LOCATION_CONTENT: Record<Country, any> = {
   id: {
     TITLE: 'lokasi',
     NAME: 'TEMPAT ACARA: SAM ANNA',
