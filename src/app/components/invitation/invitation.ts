@@ -29,7 +29,7 @@ export class Invitation {
     }
   });
   public onOpen: OutputEmitterRef<void> = output<void>();
-  // @HostBinding('class.opened') public opened: boolean = false;
+
   @HostBinding('class.id')
   public get classId(): boolean {
     return this.country() === 'id';
