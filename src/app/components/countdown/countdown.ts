@@ -1,6 +1,6 @@
 import { AfterViewInit, ChangeDetectionStrategy, Component, computed, DestroyRef, inject, Signal, signal, WritableSignal } from '@angular/core';
 import { Button } from 'primeng/button';
-import { createEvent } from 'ics';
+import { createEvent, type EventAttributes } from 'ics';
 import { AppService } from '../../app.service';
 import { COUNTDOWN_CONTENT } from './countdown.constants';
 
@@ -25,7 +25,7 @@ export class Countdown implements AfterViewInit {
   public readonly hours: WritableSignal<number> = signal<number>(0);
   public readonly minutes: WritableSignal<number> = signal<number>(0);
   public readonly seconds: WritableSignal<number> = signal<number>(0);
-  public readonly event: Signal<any> = computed(() => {
+  public readonly event: Signal<EventAttributes> = computed(() => {
     return {
       start: this.content().CALENDAR_DATETIME,
       duration: this.content().CALENDAR_DURATION,
