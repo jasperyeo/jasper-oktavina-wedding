@@ -28,11 +28,7 @@ export class App implements OnInit {
   private readonly _destroyRef: DestroyRef = inject(DestroyRef);
   private readonly _router: Router = inject(Router);
   private readonly _appService: AppService = inject(AppService);
-  protected readonly content = computed(() => {
-    return {
-      ...HEADER_AND_FOOTER
-    };
-  });
+  protected readonly content = HEADER_AND_FOOTER;
   protected readonly country: WritableSignal<Country> = signal<Country>(DEFAULT_COUNTRY);
   protected readonly opened: WritableSignal<boolean> = signal<boolean>(false);
 

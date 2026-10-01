@@ -42,5 +42,5 @@ import { CONTENT_PAGE_CONTENTS } from './content-page.constants';
 export class ContentPage {
 
   protected readonly appService = inject(AppService);
-  protected readonly content = computed(() => CONTENT_PAGE_CONTENTS);
+  protected readonly content = CONTENT_PAGE_CONTENTS;
 }

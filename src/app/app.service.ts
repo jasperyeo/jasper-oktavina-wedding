@@ -7,5 +7,5 @@ import { Country, DEFAULT_COUNTRY } from './app.constants';
 export class AppService {
 
   public readonly country: WritableSignal<Country> = signal<Country>(DEFAULT_COUNTRY);
-  public invitationOpened: WritableSignal<boolean> = signal<boolean>(false);
+  public readonly invitationOpened: WritableSignal<boolean> = signal<boolean>(false);
 }

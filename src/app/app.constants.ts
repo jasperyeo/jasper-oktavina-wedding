@@ -1,6 +1,6 @@
 export type Country = 'sg' | 'id';
 
-export const THEME_PRESET: any = {
+export const THEME_PRESET = {
   semantic: {
     primary: {
       50: '{rose.50}',
@@ -48,12 +48,20 @@ export const THEME_PRESET: any = {
   },
 };
 
-export const HEART_RAIN_ATTRIBUTES: any = {
-  IMAGE_URL: 'assets/images/mini-heart.gif',
-  CONTAINER_CLASS: 'rain-container'
-};
+interface ImageAsset {
+  ID: string;
+  ALT: string;
+  TITLE: string;
+  PATH: string;
+  WEBP: string;
+}
 
-export const HEADER_AND_FOOTER: any = {
+interface HeaderFooterAssets {
+  HEADER: ImageAsset;
+  FOOTER: ImageAsset;
+}
+
+export const HEADER_AND_FOOTER: HeaderFooterAssets = {
   HEADER: {
     ID: 'image__header',
     ALT: 'Header',
